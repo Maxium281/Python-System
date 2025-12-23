@@ -1,0 +1,264 @@
+<!-- templates/question_category.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>题库分类 - Python面试题学习系统</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='icons/font-awesome.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/custom.css') }}"
+    />
+  </head>
+  <body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="{{ url_for('main.index') }}"
+          >Python面试题系统</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('main.index') }}">首页</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="{{ url_for('question.question_category') }}"
+                >题库分类</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{{ url_for('interview.mock_interview') }}"
+                >模拟面试</a
+              >
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">我的进度</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 主体内容 -->
+    <div class="container mt-4">
+      <div class="card">
+        <div class="card-header">
+          <ul
+            class="nav nav-tabs card-header-tabs"
+            id="categoryTabs"
+            role="tablist"
+          >
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="basic-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#basic"
+                type="button"
+                role="tab"
+              >
+                基础语法
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="framework-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#framework"
+                type="button"
+                role="tab"
+              >
+                框架相关
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="project-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#project"
+                type="button"
+                role="tab"
+              >
+                项目经验
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <div class="tab-content" id="categoryTabsContent">
+            <!-- 基础语法分类 -->
+            <div class="tab-pane fade show active" id="basic" role="tabpanel">
+              <div
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <h6>基础语法题目</h6>
+                <span class="badge bg-primary" id="basicCount">加载中...</span>
+              </div>
+              <div id="basicQuestionList" class="list-group">
+                <div class="text-center py-4">
+                  <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">加载中...</span>
+                  </div>
+                  <p class="mt-2 text-muted">正在加载题目...</p>
+                </div>
+              </div>
+            </div>
+            <!-- 框架相关分类 -->
+            <div class="tab-pane fade" id="framework" role="tabpanel">
+              <div
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <h6>框架相关题目</h6>
+                <span class="badge bg-success" id="frameworkCount"
+                  >加载中...</span
+                >
+              </div>
+              <div id="frameworkQuestionList" class="list-group">
+                <div class="text-center py-4">
+                  <div class="spinner-border text-success" role="status">
+                    <span class="visually-hidden">加载中...</span>
+                  </div>
+                  <p class="mt-2 text-muted">正在加载题目...</p>
+                </div>
+              </div>
+            </div>
+            <!-- 项目经验分类 -->
+            <div class="tab-pane fade" id="project" role="tabpanel">
+              <div
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <h6>项目经验题目</h6>
+                <span class="badge bg-warning" id="projectCount"
+                  >加载中...</span
+                >
+              </div>
+              <div id="projectQuestionList" class="list-group">
+                <div class="text-center py-4">
+                  <div class="spinner-border text-warning" role="status">
+                    <span class="visually-hidden">加载中...</span>
+                  </div>
+                  <p class="mt-2 text-muted">正在加载题目...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="mt-5 py-3 bg-light text-center">
+      <p>© 2024 Python面试题学习系统（单机版）| Flask后端 + 本地数据库</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script>
+      // API基础URL
+      const API_BASE = "/question/api";
+
+      // 加载题目列表
+      function loadQuestions(category, containerId, countId) {
+        $.ajax({
+          url: `${API_BASE}/questions`,
+          method: "GET",
+          data: { category: category },
+          success: function (response) {
+            if (response.success) {
+              renderQuestionList(containerId, response.data);
+              $(`#${countId}`).text(`${response.data.length} 题`);
+            } else {
+              $(`#${containerId}`).html(`
+                <div class="alert alert-warning">
+                  <i class="fa fa-exclamation-triangle"></i> ${response.msg}
+                </div>
+              `);
+            }
+          },
+          error: function () {
+            $(`#${containerId}`).html(`
+              <div class="alert alert-danger">
+                <i class="fa fa-times-circle"></i> 网络请求失败，请检查后端服务
+              </div>
+            `);
+          },
+        });
+      }
+
+      // 渲染题目列表
+      function renderQuestionList(containerId, questions) {
+        const container = $(`#${containerId}`);
+        if (questions.length === 0) {
+          container.html(`
+            <div class="alert alert-info">
+              <i class="fa fa-info-circle"></i> 该分类下暂无题目
+            </div>
+          `);
+          return;
+        }
+
+        let html = "";
+        questions.forEach((question) => {
+          const badgeClass =
+            question.category === "基础语法"
+              ? "bg-primary"
+              : question.category === "框架相关"
+              ? "bg-success"
+              : "bg-warning";
+          const categoryText =
+            question.category === "基础语法"
+              ? "基础"
+              : question.category === "框架相关"
+              ? "框架"
+              : "项目";
+
+          html += `
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <a href="/question/detail/${question.id}" class="text-decoration-none flex-grow-1">
+                ${question.id}. ${question.title}
+              </a>
+              <span class="badge ${badgeClass} rounded-pill">${categoryText}</span>
+            </li>
+          `;
+        });
+
+        container.html(html);
+      }
+
+      // 页面加载后初始化
+      $(document).ready(function () {
+        // 初始加载基础语法题目
+        loadQuestions("basic", "basicQuestionList", "basicCount");
+
+        // 标签页切换事件
+        $("#basic-tab").on("click", function () {
+          loadQuestions("basic", "basicQuestionList", "basicCount");
+        });
+
+        $("#framework-tab").on("click", function () {
+          loadQuestions("framework", "frameworkQuestionList", "frameworkCount");
+        });
+
+        $("#project-tab").on("click", function () {
+          loadQuestions("project", "projectQuestionList", "projectCount");
+        });
+      });
+    </script>
+  </body>
+</html>

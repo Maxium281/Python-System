@@ -1,0 +1,36 @@
+/*! Font Awesome 简化版 - 包含页面用到的所有图标（无需外部字体） */
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 首页书籍图标 - fa-book */
+.fa-book:before {
+  content: "📚";
+}
+
+/* 首页对话图标 - fa-comments */
+.fa-comments:before {
+  content: "💬";
+}
+
+/* 首页图表图标 - fa-line-chart */
+.fa-line-chart:before {
+  content: "📈";
+}
+
+/* 收藏按钮星星图标 - fa-star */
+.fa-star:before {
+  content: "⭐";
+}
+
+/* 图标大小辅助类 */
+.fa-3x {
+  font-size: 3em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}

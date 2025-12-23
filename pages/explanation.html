@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>答案解析 - Python面试题学习系统</title>
+    <!-- 本地资源引入 -->
+    <link rel="stylesheet" href="../static/icons/font-awesome.min.css" />
+    <link rel="stylesheet" href="../static/css/custom.css" />
+  </head>
+  <body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Python面试题系统</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">首页</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="question_category.html">题库分类</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mock_interview.html">模拟面试</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">我的进度</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 主体内容 -->
+    <div class="container mt-4">
+      <div class="card">
+        <div
+          class="card-header d-flex justify-content-between align-items-center"
+        >
+          <h5 class="mb-0" id="questionTitle">
+            题目 1：Python中列表和元组的区别是什么？
+          </h5>
+          <button id="collectBtn" class="btn btn-outline-warning">
+            <i class="fa fa-star"></i> 收藏题目
+          </button>
+        </div>
+        <div class="card-body">
+          <!-- 替换现有的答题结果div -->
+          <div class="mb-4" id="answerResult">
+            <div class="row">
+              <div class="col-md-6">
+                <div
+                  class="p-3 border rounded mb-3"
+                  style="border-left: 5px solid #56ab2f !important"
+                >
+                  <h6 class="text-success mb-2">
+                    <i class="fa fa-check-circle"></i> 正确答案：
+                  </h6>
+                  <h4 class="text-success fw-bold" id="correctAnswerDisplay">
+                    B
+                  </h4>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div
+                  class="p-3 border rounded mb-3"
+                  style="border-left: 5px solid #667eea !important"
+                >
+                  <h6 class="text-primary mb-2">
+                    <i class="fa fa-user"></i> 你的答案：
+                  </h6>
+                  <h4 class="text-primary fw-bold" id="userAnswerDisplay">
+                    （请先在答题页选择答案）
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <div
+                id="scoreResult"
+                class="badge p-3"
+                style="
+                  font-size: 1.1rem;
+                  background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);
+                "
+              >
+                判分结果：--
+              </div>
+            </div>
+          </div>
+          <!-- 详细解析 -->
+          <div class="mb-4" id="questionExplanation">
+            <h6>解析：</h6>
+            <p class="card-text">
+              Python中列表（list）使用[]定义，是可变对象，支持增删改查操作；元组（tuple）使用()定义，是不可变对象，一旦创建无法修改元素。此外，元组的访问速度比列表更快，适合存储无需修改的数据；列表适合存储需要动态调整的数据。
+            </p>
+          </div>
+          <!-- 考点总结 -->
+          <div class="mb-4" id="knowledgePoint">
+            <h6>考点：</h6>
+            <span class="badge bg-secondary">Python基础数据类型</span>
+          </div>
+          <!-- 按钮组 -->
+          <a href="question_category.html" class="btn btn-secondary"
+            >返回题库</a
+          >
+          <a href="#" id="nextQuestionBtn" class="btn btn-primary ms-2"
+            >下一题</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="mt-5 py-3 bg-light text-center">
+      <p>© 2024 Python面试题学习系统（单机版）| 无需联网，本地运行</p>
+    </footer>
+
+    <!-- 本地JS引入 -->
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script>
+      // 模拟题目解析数据
+      const explanationData = {
+        1: {
+          id: 1,
+          title: "Python中列表和元组的区别是什么？",
+          correctAnswer: "B",
+          explanation:
+            "Python中列表（list）使用[]定义，是可变对象，支持增删改查操作；元组（tuple）使用()定义，是不可变对象，一旦创建无法修改元素。此外，元组的访问速度比列表更快，适合存储无需修改的数据；列表适合存储需要动态调整的数据。",
+          knowledgePoint: "Python基础数据类型",
+        },
+        2: {
+          id: 2,
+          title: "什么是Python的装饰器？请举例说明",
+          correctAnswer: "A",
+          explanation:
+            "Python装饰器是一种语法糖，用于在不修改原函数代码和调用方式的前提下，为函数添加额外功能（如日志记录、性能统计、权限校验等）。装饰器本质是一个高阶函数，接收被装饰函数作为参数，返回一个包装函数。",
+          knowledgePoint: "Python高级特性",
+        },
+        101: {
+          id: 101,
+          title: "Flask和Django的区别有哪些？",
+          correctAnswer: "ABD",
+          explanation:
+            "1. 轻量性：Flask是轻量级微框架，仅提供核心功能，其他功能需依赖第三方扩展；Django是全栈框架，内置ORM、Admin后台、表单验证等丰富功能。2. ORM支持：Django内置强大ORM，Flask无内置ORM，需使用SQLAlchemy等第三方库。3. 适用场景：Django适合大型、复杂的企业级项目；Flask适合小型项目、API接口或快速原型开发。4. 性能：两者性能差异并非数量级，主要取决于项目优化和场景。",
+          knowledgePoint: "Python Web框架",
+        },
+        201: {
+          id: 201,
+          title: "你在项目中如何优化Python程序的性能？",
+          correctAnswer: "ABCD",
+          explanation:
+            "1. 数据结构优化：使用生成器（generator）代替列表推导式，减少内存占用；使用集合（set）进行成员判断，时间复杂度O(1)优于列表O(n)。2. 变量优化：减少全局变量使用，全局变量查询速度慢于局部变量；使用局部变量缓存频繁访问的对象属性。3. 并发优化：IO密集型任务使用多线程/异步（asyncio），CPU密集型任务使用多进程。4. 缓存优化：使用Redis/Memoize对频繁访问的热点数据进行缓存，减少重复计算或数据库查询。5. 代码优化：避免不必要的循环嵌套，使用内置函数（如map、filter）代替手动循环，内置函数由C实现，速度更快。",
+          knowledgePoint: "Python项目性能优化",
+        },
+      };
+
+      // 获取URL中的题目ID
+      function getUrlParam(name) {
+        const reg = new RegExp(`(^|&)${name}=([^&]*)(&|$)`);
+        const r = window.location.search.substr(1).match(reg);
+        return r ? decodeURIComponent(r[2]) : 1;
+      }
+      const currentQuestionId = getUrlParam("question_id");
+      const currentExplanation =
+        explanationData[currentQuestionId] || explanationData[1];
+
+      // 模拟获取用户答题记录（从URL或本地存储，静态预览简化）
+      function getLastUserAnswer() {
+        // 简单模拟：如果从答题页跳转，默认带一个模拟答案
+        const referrer = document.referrer;
+        if (referrer.includes("answer_page.html")) {
+          return currentQuestionId == 1
+            ? "B"
+            : currentQuestionId == 101
+            ? "ABD"
+            : "A";
+        }
+        return "未作答";
+      }
+      const userAnswer = getLastUserAnswer();
+      const isCorrect = userAnswer === currentExplanation.correctAnswer;
+
+      // 渲染解析内容
+      function renderExplanation() {
+        document.getElementById(
+          "questionTitle"
+        ).textContent = `题目 ${currentExplanation.id}：${currentExplanation.title}`;
+
+        // 渲染答题结果
+        const answerResultEl = document.getElementById("answerResult");
+        answerResultEl.innerHTML = `
+                <h6 class="text-success">正确答案：${
+                  currentExplanation.correctAnswer
+                }</h6>
+                <h6 class="text-primary">你的答案：${userAnswer}</h6>
+                <h6 class="text-info">判分结果：${
+                  isCorrect ? "正确✅" : "错误❌"
+                }</h6>
+            `;
+
+        // 渲染解析和考点
+        document.getElementById("questionExplanation").innerHTML = `
+                <h6>解析：</h6>
+                <p class="card-text">${currentExplanation.explanation}</p>
+            `;
+        document.getElementById("knowledgePoint").innerHTML = `
+                <h6>考点：</h6>
+                <span class="badge bg-secondary">${currentExplanation.knowledgePoint}</span>
+            `;
+
+        // 模拟下一题链接
+        const nextQuestionBtn = document.getElementById("nextQuestionBtn");
+        let nextId = parseInt(currentQuestionId) + 1;
+        // 简单处理分类题的下一题
+        if (currentQuestionId >= 100 && currentQuestionId < 200) {
+          nextId = parseInt(currentQuestionId) + 1;
+          if (nextId >= 200) nextId = 101; // 框架题循环
+        } else if (currentQuestionId >= 200) {
+          nextId = parseInt(currentQuestionId) + 1;
+          if (nextId >= 206) nextId = 201; // 项目题循环
+        } else {
+          nextId = parseInt(currentQuestionId) + 1;
+          if (nextId >= 6) nextId = 1; // 基础题循环
+        }
+        nextQuestionBtn.href = `answer_page.html?question_id=${nextId}`;
+      }
+
+      // 收藏/取消收藏切换
+      document
+        .getElementById("collectBtn")
+        .addEventListener("click", function () {
+          const btn = this;
+          if (btn.classList.contains("btn-outline-warning")) {
+            btn.className = "btn btn-warning";
+            btn.innerHTML = '<i class="fa fa-star"></i> 已收藏';
+            alert("收藏成功！可在“我的收藏”中查看");
+          } else {
+            btn.className = "btn btn-outline-warning";
+            btn.innerHTML = '<i class="fa fa-star"></i> 收藏题目';
+            alert("已取消收藏！");
+          }
+        });
+
+      // 页面加载初始化
+      window.onload = function () {
+        renderExplanation();
+      };
+    </script>
+  </body>
+</html>

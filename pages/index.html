@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>首页 - Python面试题学习系统</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='icons/font-awesome.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/custom.css') }}"
+    />
+  </head>
+  <body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="{{ url_for('main.index') }}"
+          >Python面试题系统</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="{{ url_for('main.index') }}"
+                >首页</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{{ url_for('question.question_category') }}"
+                >题库分类</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="{{ url_for('interview.mock_interview') }}"
+                >模拟面试</a
+              >
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">我的进度</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 欢迎横幅 -->
+    <div class="container mt-4">
+      <div
+        class="alert alert-dismissible fade show"
+        style="
+          background: var(--primary-gradient);
+          color: white;
+          border-radius: 16px;
+          border: none;
+        "
+      >
+        <div class="d-flex align-items-center">
+          <div class="flex-grow-1">
+            <h4 class="alert-heading mb-1">🎯🎯 准备好你的Python面试！</h4>
+            <p class="mb-0">
+              系统已收录
+              <strong>{{ total_questions }}+</strong> 面试题，累计帮助
+              <strong>{{ total_users }}+</strong> 开发者成功求职
+            </p>
+          </div>
+          <button
+            type="button"
+            class="btn-close btn-close-white"
+            data-bs-dismiss="alert"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 学习进度 -->
+    <div class="container mt-5">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="mb-0">📊📊 你的学习进度</h5>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-3 text-center mb-3">
+              <div class="display-6 text-primary fw-bold">
+                {{ user_progress.completion_rate }}%
+              </div>
+              <p class="text-muted">总体完成度</p>
+            </div>
+            <div class="col-md-3 text-center mb-3">
+              <div class="display-6 text-success fw-bold">
+                {{ user_progress.practiced_count }}
+              </div>
+              <p class="text-muted">已练习题目</p>
+            </div>
+            <div class="col-md-3 text-center mb-3">
+              <div class="display-6 text-warning fw-bold">
+                {{ user_progress.accuracy_rate }}%
+              </div>
+              <p class="text-muted">正确率</p>
+            </div>
+            <div class="col-md-3 text-center mb-3">
+              <div class="display-6 text-info fw-bold">
+                {{ user_progress.mock_interview_count }}
+              </div>
+              <p class="text-muted">模拟面试次数</p>
+            </div>
+          </div>
+          <div class="progress mt-3">
+            {% set completion_rate = user_progress.completion_rate %}
+            <div
+              class="progress-bar"
+              role="progressbar"
+              style="width: {{ completion_rate }}%"
+              aria-valuenow="{{ user_progress.completion_rate }}"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 主体内容 -->
+    <div class="container mt-4">
+      <div class="row justify-content-center">
+        <!-- 题库分类卡片 -->
+        <div class="col-md-4 mb-4">
+          <div class="card text-center p-4">
+            <i class="fa fa-book text-primary fa-3x mb-3"></i>
+            <h5 class="card-title">题库分类</h5>
+            <p class="card-text">
+              按基础语法、框架、项目经验分类，{{ total_questions
+              }}+面试题按需练习
+            </p>
+            <a
+              href="{{ url_for('question.question_category') }}"
+              class="btn btn-primary"
+              >进入题库</a
+            >
+          </div>
+        </div>
+        <!-- 模拟面试卡片 -->
+        <div class="col-md-4 mb-4">
+          <div class="card text-center p-4">
+            <i class="fa fa-comments text-success fa-3x mb-3"></i>
+            <h5 class="card-title">模拟面试</h5>
+            <p class="card-text">随机抽题、计时答题，还原真实面试场景</p>
+            <a
+              href="{{ url_for('interview.mock_interview') }}"
+              class="btn btn-success"
+              >开始模拟</a
+            >
+          </div>
+        </div>
+        <!-- 我的进度卡片 -->
+        <div class="col-md-4 mb-4">
+          <div class="card text-center p-4">
+            <i class="fa fa-line-chart text-warning fa-3x mb-3"></i>
+            <h5 class="card-title">我的进度</h5>
+            <p class="card-text">查看答题记录、易错点总结、学习进度</p>
+            <a href="#" class="btn btn-warning">查看详情</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="mt-5 py-3 bg-light text-center">
+      <p>© 2024 Python面试题学习系统（单机版）| Flask后端 + 本地数据库</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- 解决IDE对Jinja2模板语法的错误提示 -->
+    <script>
+      // 这个脚本用于确保页面加载时Jinja2变量正确渲染
+      document.addEventListener("DOMContentLoaded", function () {
+        // 找到所有进度条，确保宽度设置正确
+        const progressBars = document.querySelectorAll(".progress-bar");
+        progressBars.forEach((bar) => {
+          const style = bar.getAttribute("style");
+          if (style && style.includes("width:") && style.includes("{{")) {
+            // 如果包含Jinja2语法，说明需要在客户端处理
+            // 这里可以添加客户端JS逻辑来处理动态宽度
+            console.log("进度条宽度需要在服务端渲染");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
