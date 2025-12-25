@@ -1,3 +1,4 @@
+<!-- -*- coding: utf-8 -*- -->
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
@@ -186,6 +187,7 @@
 
     <!-- 解决IDE对Jinja2模板语法的错误提示 -->
     <script>
+    {% raw %}
       // 这个脚本用于确保页面加载时Jinja2变量正确渲染
       document.addEventListener("DOMContentLoaded", function () {
         // 找到所有进度条，确保宽度设置正确
@@ -199,6 +201,7 @@
           }
         });
       });
+    {% endraw %}
     </script>
   </body>
 </html>

@@ -1,12 +1,19 @@
+<!-- -*- coding: utf-8 -*- -->
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>答案解析 - Python面试题学习系统</title>
-    <!-- 本地资源引入 -->
-    <link rel="stylesheet" href="../static/icons/font-awesome.min.css" />
-    <link rel="stylesheet" href="../static/css/custom.css" />
+    <!-- 使用 Flask 的 url_for 加载本地静态资源 -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='icons/font-awesome.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/custom.css') }}"
+    />
   </head>
   <body>
     <!-- 导航栏 -->
@@ -124,8 +131,8 @@
     </footer>
 
     <!-- 本地JS引入 -->
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
     <script>
       // 模拟题目解析数据
       const explanationData = {

@@ -1,0 +1,45 @@
+2025-12-25 22:59:04,878 - INFO - Generated exam with 1 questions
+2025-12-25 22:59:04,878 - INFO - Exam started, ID: 1766674744
+2025-12-25 22:59:04,878 - INFO - Exam ended, ID: 1766674744, Time: 0.00s
+2025-12-25 22:59:04,878 - ERROR - Failed to retrieve question: 'sqlite3.Row' object has no attribute 'get'
+2025-12-25 22:59:04,884 - INFO - Exam record saved, ID: 1766674744
+2025-12-25 22:59:04,945 - ERROR - Failed to retrieve question: 'sqlite3.Row' object has no attribute 'get'
+2025-12-25 22:59:05,162 - ERROR - Failed to retrieve question: 'sqlite3.Row' object has no attribute 'get'
+2025-12-25 22:59:05,167 - INFO - Saved answer: 1
+2025-12-25 22:59:05,168 - ERROR - Failed to retrieve question: 'sqlite3.Row' object has no attribute 'get'
+2025-12-25 22:59:05,173 - INFO - Saved answer: 2
+2025-12-25 22:59:05,231 - ERROR - Failed to retrieve question: 'sqlite3.Row' object has no attribute 'get'
+2025-12-25 22:59:05,237 - INFO - Saved answer: 2
+2025-12-25 22:59:36,902 - INFO - Generated exam with 1 questions
+2025-12-25 22:59:36,902 - INFO - Exam started, ID: 1766674776
+2025-12-25 22:59:36,902 - INFO - Exam ended, ID: 1766674776, Time: 0.00s
+2025-12-25 22:59:36,903 - INFO - Successfully retrieved question ID 1
+2025-12-25 22:59:36,908 - INFO - Exam record saved, ID: 1766674776
+2025-12-25 22:59:36,964 - INFO - Successfully retrieved question ID 1
+2025-12-25 22:59:37,133 - INFO - Successfully retrieved question ID 1
+2025-12-25 22:59:37,138 - INFO - Saved answer: 1
+2025-12-25 22:59:37,138 - INFO - Successfully retrieved question ID 2
+2025-12-25 22:59:37,144 - INFO - Saved answer: 2
+2025-12-25 22:59:37,199 - INFO - Successfully retrieved question ID 2
+2025-12-25 22:59:37,205 - INFO - Saved answer: 2
+2025-12-25 23:49:44,638 - WARNING - Created missing directory: D:\wfx\pthon大作业\Python-System\app\templates
+2025-12-25 23:49:44,640 - INFO - Local resource check completed successfully
+2025-12-25 23:49:44,649 - INFO - Flask app initialized successfully
+2025-12-25 23:52:44,273 - INFO - Local resource check completed successfully
+2025-12-25 23:52:44,283 - INFO - Flask app initialized successfully
+2025-12-25 23:52:55,268 - ERROR - Failed to get progress: no such table: user_records
+2025-12-26 00:02:58,067 - INFO - Local resource check completed successfully
+2025-12-26 00:02:58,082 - INFO - Flask app initialized successfully
+2025-12-26 00:03:17,049 - ERROR - Failed to get progress: no such table: user_records
+2025-12-26 00:04:03,913 - ERROR - Failed to get progress: no such table: user_records
+2025-12-26 00:04:51,261 - ERROR - Failed to get progress: no such table: user_records
+2025-12-26 00:10:59,778 - INFO - Local resource check completed successfully
+2025-12-26 00:10:59,792 - INFO - Flask app initialized successfully
+2025-12-26 00:11:10,982 - ERROR - Failed to get progress: no such table: user_records
+2025-12-26 00:11:29,669 - ERROR - Failed to get progress: no such table: user_records
+2025-12-26 00:18:02,048 - INFO - Local resource check completed successfully
+2025-12-26 00:18:02,098 - INFO - Flask app initialized successfully
+2025-12-26 00:24:32,630 - INFO - Local resource check completed successfully
+2025-12-26 00:24:32,643 - INFO - Flask app initialized successfully
+2025-12-26 00:27:16,194 - INFO - Local resource check completed successfully
+2025-12-26 00:27:16,210 - INFO - Flask app initialized successfully

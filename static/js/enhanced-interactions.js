@@ -1,3 +1,4 @@
+// -*- coding: utf-8 -*-
 // js/enhanced-interactions.js - 增强交互效果
 document.addEventListener("DOMContentLoaded", function () {
   // 1. 平滑滚动效果

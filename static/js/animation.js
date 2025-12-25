@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 // js/animations.js - 交互动画效果
 document.addEventListener("DOMContentLoaded", function () {
   // 选项选择效果
