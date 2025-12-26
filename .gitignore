@@ -1,0 +1,2 @@
+# Ignore local SQLite database
+python_learning_judge/python_learning.db
