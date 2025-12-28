@@ -1,0 +1,130 @@
+<!-- -*- coding: utf-8 -*- -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习进度 - Python面试题学习系统</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='icons/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('main.index') }}">Python面试题系统</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('main.index') }}">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('question.question_category') }}">题库分类</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('interview.mock_interview') }}">模拟面试</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{{ url_for('progress.progress') }}">我的进度</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h2>学习进度统计</h2>
+        
+        <div class="row mt-4">
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">总答题数</h5>
+                        <h3 class="text-primary">{{ progress.get('total', 0) }}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">正确数</h5>
+                        <h3 class="text-success">{{ progress.get('correct', 0) }}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">错误数</h5>
+                        <h3 class="text-danger">{{ progress.get('wrong', 0) }}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">准确率</h5>
+                        <h3 class="text-info">{{ progress.get('accuracy', 0) }}%</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">分类统计</div>
+                    <div class="card-body">
+                        {% if progress.get('category_stats') %}
+                            <ul class="list-group">
+                                {% for category, stats in progress.get('category_stats', {}).items() %}
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span>{{ category }}</span>
+                                    <span>{{ stats.get('correct', 0) }}/{{ stats.get('total', 0) }} ({{ stats.get('accuracy', 0) }}%)</span>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        {% else %}
+                            <p class="text-muted">暂无数据</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">难度统计</div>
+                    <div class="card-body">
+                        {% if progress.get('difficulty_stats') %}
+                            <ul class="list-group">
+                                {% for difficulty, stats in progress.get('difficulty_stats', {}).items() %}
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span>{{ difficulty }}</span>
+                                    <span>{{ stats.get('correct', 0) }}/{{ stats.get('total', 0) }} ({{ stats.get('accuracy', 0) }}%)</span>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        {% else %}
+                            <p class="text-muted">暂无数据</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">最近7天学习情况</div>
+                    <div class="card-body">
+                        <p>总答题数: {{ progress.get('recent_7_days', {}).get('total', 0) }}</p>
+                        <p>正确数: {{ progress.get('recent_7_days', {}).get('correct', 0) }}</p>
+                        <p>准确率: {{ progress.get('recent_7_days', {}).get('accuracy', 0) }}%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <a href="{{ url_for('progress.error_questions') }}" class="btn btn-danger">查看错题 ({{ progress.get('error_count', 0) }})</a>
+                <a href="{{ url_for('progress.favorite_questions') }}" class="btn btn-warning">查看收藏 ({{ progress.get('favorite_count', 0) }})</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>
+

@@ -1,0 +1,67 @@
+[
+  {
+    "category": "Python Basics",
+    "title": "Python中如何定义一个列表？",
+    "option_a": "list = []",
+    "option_b": "list = list()",
+    "option_c": "list = [1, 2, 3]",
+    "option_d": "以上都可以",
+    "correct_answer": "D",
+    "difficulty": "Easy",
+    "is_high_frequency": true,
+    "analysis": "在Python中，可以使用多种方式定义列表：空列表[]、list()函数、或直接包含元素。",
+    "knowledge_point": "Python基础语法 - 列表定义"
+  },
+  {
+    "category": "Python Basics",
+    "title": "Python中哪个关键字用于定义函数？",
+    "option_a": "function",
+    "option_b": "def",
+    "option_c": "define",
+    "option_d": "func",
+    "correct_answer": "B",
+    "difficulty": "Easy",
+    "is_high_frequency": true,
+    "analysis": "Python使用def关键字来定义函数。",
+    "knowledge_point": "Python基础语法 - 函数定义"
+  },
+  {
+    "category": "Flask Framework",
+    "title": "Flask中如何定义一个路由？",
+    "option_a": "@app.route('/path')",
+    "option_b": "app.route('/path')",
+    "option_c": "route('/path')",
+    "option_d": "flask.route('/path')",
+    "correct_answer": "A",
+    "difficulty": "Medium",
+    "is_high_frequency": true,
+    "analysis": "Flask使用装饰器@app.route()来定义路由。",
+    "knowledge_point": "Flask框架 - 路由定义"
+  },
+  {
+    "category": "Data Structure",
+    "title": "Python中字典的键必须是什么类型？",
+    "option_a": "只能是字符串",
+    "option_b": "只能是数字",
+    "option_c": "必须是不可变类型",
+    "option_d": "可以是任何类型",
+    "correct_answer": "C",
+    "difficulty": "Medium",
+    "is_high_frequency": false,
+    "analysis": "字典的键必须是不可变类型（如字符串、数字、元组），不能是列表或字典等可变类型。",
+    "knowledge_point": "数据结构 - 字典特性"
+  },
+  {
+    "category": "Algorithm",
+    "title": "以下哪个是O(n log n)时间复杂度的排序算法？",
+    "option_a": "冒泡排序",
+    "option_b": "快速排序",
+    "option_c": "选择排序",
+    "option_d": "插入排序",
+    "correct_answer": "B",
+    "difficulty": "Hard",
+    "is_high_frequency": false,
+    "analysis": "快速排序的平均时间复杂度是O(n log n)，是最常用的高效排序算法之一。",
+    "knowledge_point": "算法 - 排序算法复杂度"
+  }
+]

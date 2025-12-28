@@ -43,3 +43,606 @@
 2025-12-26 00:24:32,643 - INFO - Flask app initialized successfully
 2025-12-26 00:27:16,194 - INFO - Local resource check completed successfully
 2025-12-26 00:27:16,210 - INFO - Flask app initialized successfully
+2025-12-28 17:05:54 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:05:54 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:05:54 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:05:54 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:05:54 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:05:54 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:05:54 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:05:54 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:05:54 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:05:54 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:05:54 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:05:54 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:05:54 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:05:54 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:05:54 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:05:57 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:05:57 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:05:57 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:05:57 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:05:57 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:05:57 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:05:57 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:05:57 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:05:57 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:05:57 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:05:57 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:05:57 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:05:57 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:05:57 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:05:57 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:09:02 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:09:02 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:09:02 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:09:02 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:09:02 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:09:02 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:09:02 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:09:02 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:09:02 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:09:02 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:09:02 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:09:02 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:09:02 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:09:02 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:09:02 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:10:30 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:10:30 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:10:30 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:10:30 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:10:30 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:10:30 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:10:30 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:10:30 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:10:30 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:10:30 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:10:30 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:10:30 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:10:30 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:10:30 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:10:30 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:10:31 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:10:31 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:10:31 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:10:31 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:10:31 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:10:31 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:10:31 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:10:31 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:10:31 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:10:31 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:10:31 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:10:31 - interview_system - INFO - logger.py:111 - 静态资源检查通过
+2025-12-28 17:10:31 - interview_system - INFO - logger.py:111 - 本地资源检查完成
+2025-12-28 17:10:31 - interview_system - INFO - logger.py:111 - Flask app initialized successfully
+2025-12-28 17:11:02 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:11:02 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:11:02 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:11:02 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:11:03 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:11:03 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:11:03 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:11:03 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:11:03 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:11:03 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:11:03 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:11:03 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:11:03 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:11:03 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:11:03 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:11:03 - interview_system - INFO - logger.py:111 - 静态资源检查通过
+2025-12-28 17:11:03 - interview_system - INFO - logger.py:111 - 本地资源检查完成
+2025-12-28 17:11:03 - interview_system - INFO - logger.py:111 - Flask app initialized successfully
+2025-12-28 17:11:28 - interview_system - ERROR - logger.py:119 - 查询执行失败: no such column: user_id
+SQL: SELECT COUNT(*) as total FROM user_records WHERE user_id = ?
+Params: (1,)
+2025-12-28 17:11:28 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: no such column: user_id
+2025-12-28 17:11:47 - interview_system - ERROR - logger.py:119 - 查询执行失败: no such column: user_id
+SQL: SELECT COUNT(*) as total FROM user_records WHERE user_id = ?
+Params: (1,)
+2025-12-28 17:11:47 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: no such column: user_id
+2025-12-28 17:12:01 - interview_system - ERROR - logger.py:119 - 查询执行失败: no such column: user_id
+SQL: SELECT COUNT(*) as total FROM user_records WHERE user_id = ?
+Params: (1,)
+2025-12-28 17:12:01 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: no such column: user_id
+2025-12-28 17:12:07 - interview_system - ERROR - logger.py:119 - 查询执行失败: no such column: user_id
+SQL: SELECT COUNT(*) as total FROM user_records WHERE user_id = ?
+Params: (1,)
+2025-12-28 17:12:07 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: no such column: user_id
+2025-12-28 17:12:15 - interview_system - ERROR - logger.py:119 - 查询执行失败: no such column: user_id
+SQL: SELECT COUNT(*) as total FROM user_records WHERE user_id = ?
+Params: (1,)
+2025-12-28 17:12:15 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: no such column: user_id
+2025-12-28 17:12:36 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:12:36 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:12:36 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:12:36 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:12:36 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:12:36 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:12:36 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:12:36 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:12:36 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:12:36 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:12:36 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:12:36 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:12:36 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:12:36 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:12:36 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:12:36 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:12:36 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:12:36 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:12:36 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:15:31 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:15:31 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:15:31 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:15:31 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:15:31 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:15:31 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:15:31 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:15:31 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:15:31 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:15:31 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:15:31 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:15:31 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:15:31 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:15:31 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:15:31 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:15:33 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:15:33 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:15:33 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:15:33 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:15:33 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:15:33 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:15:33 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:15:33 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:15:33 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:15:33 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:15:33 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:15:33 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:15:33 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:15:33 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:15:33 - interview_system - ERROR - logger.py:119 - 执行失败: table questions has no column named create_time
+SQL: INSERT INTO questions 
+
+                     (category, title, option_a, option_b, option_c, option_d, 
+
+                      difficulty, is_high_frequency, create_time, update_time)
+
+                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Params: ('Python Basics', 'Python中如何定义一个列表？', 'list = []', 'list = list()', 'list = [1, 2, 3]', '以上都可以', 'Easy', 1, '2025-12-28 17:15:33', '2025-12-28 17:15:33')
+2025-12-28 17:15:33 - interview_system - ERROR - logger.py:119 - ??????: table questions has no column named create_time
+2025-12-28 17:15:33 - interview_system - ERROR - logger.py:119 - 执行失败: table questions has no column named create_time
+SQL: INSERT INTO questions 
+
+                     (category, title, option_a, option_b, option_c, option_d, 
+
+                      difficulty, is_high_frequency, create_time, update_time)
+
+                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Params: ('Python Basics', 'Python中哪个关键字用于定义函数？', 'function', 'def', 'define', 'func', 'Easy', 1, '2025-12-28 17:15:33', '2025-12-28 17:15:33')
+2025-12-28 17:15:33 - interview_system - ERROR - logger.py:119 - ??????: table questions has no column named create_time
+2025-12-28 17:15:33 - interview_system - ERROR - logger.py:119 - 执行失败: table questions has no column named create_time
+SQL: INSERT INTO questions 
+
+                     (category, title, option_a, option_b, option_c, option_d, 
+
+                      difficulty, is_high_frequency, create_time, update_time)
+
+                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Params: ('Flask Framework', 'Flask中如何定义一个路由？', "@app.route('/path')", "app.route('/path')", "route('/path')", "flask.route('/path')", 'Medium', 1, '2025-12-28 17:15:33', '2025-12-28 17:15:33')
+2025-12-28 17:15:33 - interview_system - ERROR - logger.py:119 - ??????: table questions has no column named create_time
+2025-12-28 17:15:33 - interview_system - ERROR - logger.py:119 - 执行失败: table questions has no column named create_time
+SQL: INSERT INTO questions 
+
+                     (category, title, option_a, option_b, option_c, option_d, 
+
+                      difficulty, is_high_frequency, create_time, update_time)
+
+                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Params: ('Data Structure', 'Python中字典的键必须是什么类型？', '只能是字符串', '只能是数字', '必须是不可变类型', '可以是任何类型', 'Medium', 0, '2025-12-28 17:15:33', '2025-12-28 17:15:33')
+2025-12-28 17:15:33 - interview_system - ERROR - logger.py:119 - ??????: table questions has no column named create_time
+2025-12-28 17:15:33 - interview_system - ERROR - logger.py:119 - 执行失败: table questions has no column named create_time
+SQL: INSERT INTO questions 
+
+                     (category, title, option_a, option_b, option_c, option_d, 
+
+                      difficulty, is_high_frequency, create_time, update_time)
+
+                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Params: ('Algorithm', '以下哪个是O(n log n)时间复杂度的排序算法？', '冒泡排序', '快速排序', '选择排序', '插入排序', 'Hard', 0, '2025-12-28 17:15:33', '2025-12-28 17:15:33')
+2025-12-28 17:15:33 - interview_system - ERROR - logger.py:119 - ??????: table questions has no column named create_time
+2025-12-28 17:15:33 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:15:33 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:15:33 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:15:33 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:15:33 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:15:33 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:15:50 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:15:50 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:15:50 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:15:50 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:15:50 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:15:50 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:15:50 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:15:50 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:15:50 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:15:50 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:15:50 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:15:50 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:15:50 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:15:50 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:15:50 - interview_system - ERROR - logger.py:119 - 执行失败: table questions has no column named create_time
+SQL: INSERT INTO questions 
+
+                     (category, title, option_a, option_b, option_c, option_d, 
+
+                      difficulty, is_high_frequency, create_time, update_time)
+
+                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Params: ('Python Basics', 'Python中如何定义一个列表？', 'list = []', 'list = list()', 'list = [1, 2, 3]', '以上都可以', 'Easy', 1, '2025-12-28 17:15:50', '2025-12-28 17:15:50')
+2025-12-28 17:15:50 - interview_system - ERROR - logger.py:119 - ??????: table questions has no column named create_time
+2025-12-28 17:15:50 - interview_system - ERROR - logger.py:119 - 执行失败: table questions has no column named create_time
+SQL: INSERT INTO questions 
+
+                     (category, title, option_a, option_b, option_c, option_d, 
+
+                      difficulty, is_high_frequency, create_time, update_time)
+
+                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Params: ('Python Basics', 'Python中哪个关键字用于定义函数？', 'function', 'def', 'define', 'func', 'Easy', 1, '2025-12-28 17:15:50', '2025-12-28 17:15:50')
+2025-12-28 17:15:50 - interview_system - ERROR - logger.py:119 - ??????: table questions has no column named create_time
+2025-12-28 17:15:50 - interview_system - ERROR - logger.py:119 - 执行失败: table questions has no column named create_time
+SQL: INSERT INTO questions 
+
+                     (category, title, option_a, option_b, option_c, option_d, 
+
+                      difficulty, is_high_frequency, create_time, update_time)
+
+                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Params: ('Flask Framework', 'Flask中如何定义一个路由？', "@app.route('/path')", "app.route('/path')", "route('/path')", "flask.route('/path')", 'Medium', 1, '2025-12-28 17:15:50', '2025-12-28 17:15:50')
+2025-12-28 17:15:50 - interview_system - ERROR - logger.py:119 - ??????: table questions has no column named create_time
+2025-12-28 17:15:50 - interview_system - ERROR - logger.py:119 - 执行失败: table questions has no column named create_time
+SQL: INSERT INTO questions 
+
+                     (category, title, option_a, option_b, option_c, option_d, 
+
+                      difficulty, is_high_frequency, create_time, update_time)
+
+                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Params: ('Data Structure', 'Python中字典的键必须是什么类型？', '只能是字符串', '只能是数字', '必须是不可变类型', '可以是任何类型', 'Medium', 0, '2025-12-28 17:15:50', '2025-12-28 17:15:50')
+2025-12-28 17:15:50 - interview_system - ERROR - logger.py:119 - ??????: table questions has no column named create_time
+2025-12-28 17:15:50 - interview_system - ERROR - logger.py:119 - 执行失败: table questions has no column named create_time
+SQL: INSERT INTO questions 
+
+                     (category, title, option_a, option_b, option_c, option_d, 
+
+                      difficulty, is_high_frequency, create_time, update_time)
+
+                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Params: ('Algorithm', '以下哪个是O(n log n)时间复杂度的排序算法？', '冒泡排序', '快速排序', '选择排序', '插入排序', 'Hard', 0, '2025-12-28 17:15:50', '2025-12-28 17:15:50')
+2025-12-28 17:15:50 - interview_system - ERROR - logger.py:119 - ??????: table questions has no column named create_time
+2025-12-28 17:15:50 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:15:50 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:15:50 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:15:50 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:15:50 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:15:50 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:16:10 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:16:10 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:16:10 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:16:10 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:16:10 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:16:10 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:16:10 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:16:10 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:16:10 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:16:10 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:16:10 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:16:10 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:16:10 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:16:10 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:16:10 - interview_system - ERROR - logger.py:119 - 执行失败: table questions has no column named create_time
+SQL: INSERT INTO questions 
+
+                     (category, title, option_a, option_b, option_c, option_d, 
+
+                      difficulty, is_high_frequency, create_time, update_time)
+
+                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Params: ('Python Basics', 'Python中如何定义一个列表？', 'list = []', 'list = list()', 'list = [1, 2, 3]', '以上都可以', 'Easy', 1, '2025-12-28 17:16:10', '2025-12-28 17:16:10')
+2025-12-28 17:16:10 - interview_system - ERROR - logger.py:119 - ??????: table questions has no column named create_time
+2025-12-28 17:16:10 - interview_system - ERROR - logger.py:119 - 执行失败: table questions has no column named create_time
+SQL: INSERT INTO questions 
+
+                     (category, title, option_a, option_b, option_c, option_d, 
+
+                      difficulty, is_high_frequency, create_time, update_time)
+
+                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Params: ('Python Basics', 'Python中哪个关键字用于定义函数？', 'function', 'def', 'define', 'func', 'Easy', 1, '2025-12-28 17:16:10', '2025-12-28 17:16:10')
+2025-12-28 17:16:10 - interview_system - ERROR - logger.py:119 - ??????: table questions has no column named create_time
+2025-12-28 17:16:10 - interview_system - ERROR - logger.py:119 - 执行失败: table questions has no column named create_time
+SQL: INSERT INTO questions 
+
+                     (category, title, option_a, option_b, option_c, option_d, 
+
+                      difficulty, is_high_frequency, create_time, update_time)
+
+                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Params: ('Flask Framework', 'Flask中如何定义一个路由？', "@app.route('/path')", "app.route('/path')", "route('/path')", "flask.route('/path')", 'Medium', 1, '2025-12-28 17:16:10', '2025-12-28 17:16:10')
+2025-12-28 17:16:10 - interview_system - ERROR - logger.py:119 - ??????: table questions has no column named create_time
+2025-12-28 17:16:10 - interview_system - ERROR - logger.py:119 - 执行失败: table questions has no column named create_time
+SQL: INSERT INTO questions 
+
+                     (category, title, option_a, option_b, option_c, option_d, 
+
+                      difficulty, is_high_frequency, create_time, update_time)
+
+                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Params: ('Data Structure', 'Python中字典的键必须是什么类型？', '只能是字符串', '只能是数字', '必须是不可变类型', '可以是任何类型', 'Medium', 0, '2025-12-28 17:16:10', '2025-12-28 17:16:10')
+2025-12-28 17:16:10 - interview_system - ERROR - logger.py:119 - ??????: table questions has no column named create_time
+2025-12-28 17:16:10 - interview_system - ERROR - logger.py:119 - 执行失败: table questions has no column named create_time
+SQL: INSERT INTO questions 
+
+                     (category, title, option_a, option_b, option_c, option_d, 
+
+                      difficulty, is_high_frequency, create_time, update_time)
+
+                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Params: ('Algorithm', '以下哪个是O(n log n)时间复杂度的排序算法？', '冒泡排序', '快速排序', '选择排序', '插入排序', 'Hard', 0, '2025-12-28 17:16:10', '2025-12-28 17:16:10')
+2025-12-28 17:16:10 - interview_system - ERROR - logger.py:119 - ??????: table questions has no column named create_time
+2025-12-28 17:16:10 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:16:10 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:16:10 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:16:10 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:16:10 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:16:10 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:16:43 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:16:43 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:16:43 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:16:43 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:16:43 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:16:43 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:16:43 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:16:43 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:16:43 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:16:43 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:16:43 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:16:43 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:16:43 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:16:43 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:16:43 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:16:43 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:16:43 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:16:43 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:16:43 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:18:16 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:18:16 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:18:16 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:18:16 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:26:28 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:26:28 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:26:28 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:26:28 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:26:28 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:26:28 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:26:28 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:26:28 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:26:28 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:26:28 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:26:28 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:26:28 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:26:28 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:26:28 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:26:28 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:26:28 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:26:28 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:26:28 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:26:28 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:26:52 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:26:52 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:26:52 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:26:52 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:26:52 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:26:52 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:26:52 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:26:52 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:26:52 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:26:52 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:26:52 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:26:52 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:26:52 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:26:52 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:26:52 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:26:52 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:26:52 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:26:52 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:26:52 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:26:53 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:26:53 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:26:53 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:26:53 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:26:53 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:26:53 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:26:53 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:26:53 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:26:53 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:26:53 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:26:53 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:26:53 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:26:53 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:26:53 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:26:53 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:26:53 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:26:53 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:26:53 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:26:53 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:28:12 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:28:12 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:28:12 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:28:12 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:28:12 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:28:12 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:28:12 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:28:12 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:28:12 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:28:12 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:28:12 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:28:12 - interview_system - INFO - logger.py:111 - 静态资源检查通过
+2025-12-28 17:28:12 - interview_system - INFO - logger.py:111 - 本地资源检查完成
+2025-12-28 17:28:12 - interview_system - INFO - logger.py:111 - Flask app initialized successfully
+2025-12-28 17:28:21 - interview_system - ERROR - logger.py:119 - 查询执行失败: no such column: user_id
+SQL: SELECT COUNT(*) as total FROM user_records WHERE user_id = ?
+Params: (1,)
+2025-12-28 17:28:21 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: no such column: user_id
+2025-12-28 17:30:00 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:30:00 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:30:00 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:30:00 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:30:00 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:30:00 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:30:00 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:30:00 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:30:00 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:30:00 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:30:00 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:30:00 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:30:00 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:30:00 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:30:00 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:30:36 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:30:36 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:30:36 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:30:36 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:30:41 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:30:41 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:30:41 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:30:41 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:30:41 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:30:41 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:30:41 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:30:41 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:30:41 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:30:41 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:30:41 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:30:41 - interview_system - INFO - logger.py:111 - 静态资源检查通过
+2025-12-28 17:30:41 - interview_system - INFO - logger.py:111 - 本地资源检查完成
+2025-12-28 17:30:41 - interview_system - INFO - logger.py:111 - Flask app initialized successfully
+2025-12-28 17:30:54 - interview_system - ERROR - logger.py:119 - 查询执行失败: no such column: user_id
+SQL: SELECT COUNT(*) as total FROM user_records WHERE user_id = ?
+Params: (1,)
+2025-12-28 17:30:54 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: no such column: user_id
+2025-12-28 17:32:04 - interview_system - ERROR - logger.py:119 - 查询执行失败: no such column: user_id
+SQL: SELECT COUNT(*) as total FROM user_records WHERE user_id = ?
+Params: (1,)
+2025-12-28 17:32:04 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: no such column: user_id
+2025-12-28 17:32:24 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:32:24 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:32:24 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:32:24 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:32:39 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:32:39 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:32:39 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:32:39 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:32:39 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:32:39 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:32:39 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:32:39 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:32:39 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:32:39 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:32:39 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:32:39 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:32:39 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:32:39 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:32:39 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:32:39 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:32:39 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:32:39 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:32:39 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:32:43 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:32:43 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:32:43 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:32:43 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:32:43 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:32:43 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:32:43 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:32:43 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:32:43 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:32:43 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:32:43 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:32:43 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:32:43 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:32:43 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:32:43 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:33:00 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:33:00 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:33:00 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:33:00 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:33:00 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:33:00 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:33:00 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:33:00 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:33:00 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:33:00 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:33:00 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:33:00 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:33:00 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:33:00 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:33:00 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:33:00 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:33:00 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:33:00 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:33:00 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:33:30 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:33:30 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:33:30 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:33:30 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:33:30 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:33:30 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:33:30 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:33:30 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:33:30 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:33:30 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:33:30 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:33:30 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:33:30 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:33:30 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:33:30 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:33:30 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:33:30 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:33:30 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:33:30 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:35:22 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:35:22 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:35:22 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:35:22 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:35:22 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:35:22 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:35:22 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:35:22 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:35:22 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:35:22 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:35:22 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:35:22 - interview_system - INFO - logger.py:111 - 静态资源检查通过
+2025-12-28 17:35:22 - interview_system - INFO - logger.py:111 - 本地资源检查完成
+2025-12-28 17:35:22 - interview_system - INFO - logger.py:111 - Flask app initialized successfully
+2025-12-28 17:36:31 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:36:31 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:36:31 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:36:31 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:39:52 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:39:52 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:39:52 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:39:52 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:39:52 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:39:52 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:39:52 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:39:52 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:39:52 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 17:39:52 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 17:39:52 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 17:39:52 - interview_system - INFO - logger.py:111 - 静态资源检查通过
+2025-12-28 17:39:52 - interview_system - INFO - logger.py:111 - 本地资源检查完成
+2025-12-28 17:39:52 - interview_system - INFO - logger.py:111 - Flask app initialized successfully

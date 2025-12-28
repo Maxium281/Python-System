@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 init_db.py
 B模块：数据库初始化脚本

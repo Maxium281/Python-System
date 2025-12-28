@@ -176,10 +176,21 @@
 
       // 加载题目列表
       function loadQuestions(category, containerId, countId) {
+        // 显示加载状态
+        $(`#${containerId}`).html(`
+          <div class="text-center py-4">
+            <div class="spinner-border text-primary" role="status">
+              <span class="visually-hidden">加载中...</span>
+            </div>
+            <p class="mt-2 text-muted">正在加载题目...</p>
+          </div>
+        `);
+        
         $.ajax({
           url: `${API_BASE}/questions`,
           method: "GET",
           data: { category: category },
+          timeout: 10000,
           success: function (response) {
             if (response.success) {
               renderQuestionList(containerId, response.data);
@@ -187,15 +198,17 @@
             } else {
               $(`#${containerId}`).html(`
                 <div class="alert alert-warning">
-                  <i class="fa fa-exclamation-triangle"></i> ${response.msg}
+                  <i class="fa fa-exclamation-triangle"></i> ${response.msg || '加载失败'}
                 </div>
               `);
             }
           },
-          error: function () {
+          error: function (xhr, status, error) {
+            console.error('API请求失败:', status, error, xhr.responseText);
             $(`#${containerId}`).html(`
               <div class="alert alert-danger">
-                <i class="fa fa-times-circle"></i> 网络请求失败，请检查后端服务
+                <i class="fa fa-times-circle"></i> 网络请求失败: ${error || status}
+                <br><small>请检查后端服务是否正常运行</small>
               </div>
             `);
           },
@@ -216,18 +229,23 @@
 
         let html = "";
         questions.forEach((question) => {
-          const badgeClass =
-            question.category === "基础语法"
-              ? "bg-primary"
-              : question.category === "框架相关"
-              ? "bg-success"
-              : "bg-warning";
-          const categoryText =
-            question.category === "基础语法"
-              ? "基础"
-              : question.category === "框架相关"
-              ? "框架"
-              : "项目";
+          // 根据实际分类名称设置样式
+          const category = question.category || "";
+          let badgeClass = "bg-secondary";
+          let categoryText = category;
+          
+          if (category.includes("Python Basics") || category.includes("基础")) {
+            badgeClass = "bg-primary";
+            categoryText = "基础";
+          } else if (category.includes("Flask") || category.includes("框架")) {
+            badgeClass = "bg-success";
+            categoryText = "框架";
+          } else if (category.includes("Project") || category.includes("项目")) {
+            badgeClass = "bg-warning";
+            categoryText = "项目";
+          } else {
+            categoryText = category;
+          }
 
           html += `
             <li class="list-group-item d-flex justify-content-between align-items-center">

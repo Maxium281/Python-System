@@ -44,7 +44,8 @@ def api_get_questions():
     req_cat = request.args.get('category', 'basic')
     db_cat = category_map.get(req_cat, req_cat)
     try:
-        questions = question_bank.get_questions_by_category(db_cat, page=1, page_size=100)
+        result = question_bank.get_questions_by_category(db_cat, page=1, page_size=100)
+        questions = result.get('questions', [])
         data = [{"id": q.get('id'), "category": q.get('category'), "title": q.get('title')} for q in questions]
         return jsonify({"success": True, "data": data})
     except Exception as e:

@@ -1,27 +1,27 @@
-# -*- coding: utf-8 -*-
-from flask import Flask
-from jinja2 import ChoiceLoader, FileSystemLoader
-from app.routes import register_routes
-from app.utils.logger import Logger
-import os
-
-logger = Logger()
-
-def create_app(config):
-    # ´´½¨ Flask Ó¦ÓÃ£¬Ö§³ÖÍ¬Ê±´Ó app/templates Óë ÏîÄ¿¸ù pages ¼ÓÔØÄ£°å
-    app = Flask(
-        __name__,
-        template_folder=config.TEMPLATE_PATH,
-        static_folder=config.STATIC_PATH
-    )
-    pages_path = os.path.abspath(os.path.join(config.BASE_DIR, 'pages'))
-    app.jinja_loader = ChoiceLoader([
-        FileSystemLoader(config.TEMPLATE_PATH),
-        FileSystemLoader(pages_path)
-    ])
-    # ×¢²áÂ·ÓÉÀ¶Í¼
-    register_routes(app)
-    app.config['STATIC_FOLDER'] = config.STATIC_PATH
-    app.config['TEMPLATE_FOLDER'] = config.TEMPLATE_PATH
-    logger.info("Flask app initialized successfully")
-    return app
+# -*- coding: utf-8 -*-
+from flask import Flask
+from jinja2 import ChoiceLoader, FileSystemLoader
+from app.routes import register_routes
+from app.utils.logger import Logger
+import os
+
+logger = Logger()
+
+def create_app(config):
+    # åˆ›å»º Flask åº”ç”¨ï¼Œæ”¯æŒåŒæ—¶ä» app/templates ä¸ é¡¹ç›®æ ¹ pages åŠ è½½æ¨¡æ¿
+    app = Flask(
+        __name__,
+        template_folder=config.TEMPLATE_PATH,
+        static_folder=config.STATIC_PATH
+    )
+    pages_path = os.path.abspath(os.path.join(config.BASE_DIR, 'pages'))
+    app.jinja_loader = ChoiceLoader([
+        FileSystemLoader(config.TEMPLATE_PATH),
+        FileSystemLoader(pages_path)
+    ])
+    # æ³¨å†Œè·¯ç”±è“å›¾
+    register_routes(app)
+    app.config['STATIC_FOLDER'] = config.STATIC_PATH
+    app.config['TEMPLATE_FOLDER'] = config.TEMPLATE_PATH
+    logger.info("Flask app initialized successfully")
+    return app

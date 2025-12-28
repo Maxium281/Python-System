@@ -1,0 +1,55 @@
+<!-- -*- coding: utf-8 -*- -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>收藏题目 - Python面试题学习系统</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='icons/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('main.index') }}">Python面试题系统</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('main.index') }}">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('question.question_category') }}">题库分类</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('interview.mock_interview') }}">模拟面试</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{{ url_for('progress.progress') }}">我的进度</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h2>收藏题目</h2>
+        <p class="text-muted">共 {{ favorite_questions|length }} 道收藏题目</p>
+        
+        {% if favorite_questions %}
+        <div class="list-group">
+            {% for question in favorite_questions %}
+            <div class="list-group-item">
+                <h5><a href="/question/detail/{{ question.get('id') }}">{{ question.get('title', '无标题') }}</a></h5>
+                <p class="text-muted">分类: {{ question.get('category', '未知') }} | 难度: {{ question.get('difficulty', '未知') }}</p>
+                <p class="text-muted">收藏时间: {{ question.get('collect_time', '未知') }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="alert alert-info">
+            <i class="fa fa-info-circle"></i> 暂无收藏题目
+        </div>
+        {% endif %}
+        
+        <div class="mt-4">
+            <a href="{{ url_for('progress.progress') }}" class="btn btn-secondary">返回进度</a>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>
+
