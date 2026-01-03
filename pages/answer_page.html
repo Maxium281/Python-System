@@ -49,7 +49,7 @@
                 >模拟面试</a
               >
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">我的进度</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('progress.progress') }}">我的进度</a></li>
           </ul>
         </div>
       </div>
@@ -114,129 +114,163 @@
       const questionId =
         new URLSearchParams(window.location.search).get("question_id") || 1;
 
-      // 加载题目详情
-      function loadQuestionDetail() {
-        $.ajax({
-          url: `${API_BASE}/question/${questionId}`,
-          method: "GET",
-          success: function (response) {
-            if (response.success) {
-              renderQuestion(response.data);
-            } else {
-              showError(response.msg);
-            }
-          },
-          error: function () {
-            showError("网络请求失败，请检查后端服务");
-          },
-        });
+      function escapeHtml(s) {
+        return String(s ?? "")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#39;");
       }
 
-      // 渲染题目
-      function renderQuestion(question) {
-        $("#questionTitle").text(`题目 ${question.id}：${question.title}`);
-        $("#questionType").text(
-          `${question.type === "single" ? "单选题" : "多选题"} | 难度：${
-            question.difficulty
-          }`
-        );
-        $("#questionId").val(question.id);
+      function showError(message) {
+        const optionList = document.getElementById("optionList");
+        optionList.innerHTML = `
+          <div class="alert alert-danger">
+            <i class="fa fa-times-circle"></i> ${escapeHtml(message)}
+          </div>
+        `;
+      }
 
-        // 渲染选项
-        let optionHtml = "";
-        question.options.forEach((option) => {
-          const inputType = question.type === "single" ? "radio" : "checkbox";
-          optionHtml += `
+      function getSelectedAnswer() {
+        const checked = document.querySelectorAll('input[name="user_answer"]:checked');
+        if (!checked || checked.length === 0) return "";
+        const ans = Array.from(checked).map((i) => i.value).sort().join("");
+        return ans;
+      }
+
+      function syncSubmitEnabled() {
+        const submitBtn = document.getElementById("submitBtn");
+        submitBtn.disabled = !getSelectedAnswer();
+      }
+
+      async function loadQuestionDetail() {
+        try {
+          const res = await fetch(`${API_BASE}/question/${encodeURIComponent(questionId)}`, {
+            method: "GET",
+            cache: "no-store",
+          });
+
+          if (!res.ok) {
+            showError(`请求失败：HTTP ${res.status}`);
+            return;
+          }
+
+          const payload = await res.json();
+          const ok = payload && (payload.success === true) && payload.data;
+          if (!ok) {
+            showError(payload?.msg || "加载失败");
+            return;
+          }
+
+          renderQuestion(payload.data);
+        } catch (e) {
+          console.error(e);
+          showError("网络请求失败，请检查后端服务");
+        }
+      }
+
+      function renderQuestion(question) {
+        document.getElementById("questionTitle").textContent = `题目 ${question.id}：${question.title}`;
+        document.getElementById("questionType").textContent =
+          `${question.type === "single" ? "单选题" : "多选题"} | 难度：${question.difficulty || "Easy"}`;
+        document.getElementById("questionId").value = String(question.id);
+
+        const optionList = document.getElementById("optionList");
+        const inputType = question.type === "single" ? "radio" : "checkbox";
+
+        let html = "";
+        for (const option of (question.options || [])) {
+          html += `
             <label class="list-group-item">
-              <input class="form-check-input me-2" type="${inputType}" 
-                     name="user_answer" value="${option.option_key}">
-              ${option.option_key}. ${option.option_content}
+              <input class="form-check-input me-2" type="${inputType}"
+                     name="user_answer" value="${escapeHtml(option.option_key)}">
+              ${escapeHtml(option.option_key)}. ${escapeHtml(option.option_content)}
             </label>
           `;
-        });
+        }
+        optionList.innerHTML = html;
 
-        $("#optionList").html(optionHtml);
-        $("#submitBtn").prop("disabled", false);
+        // 选择后启用提交
+        optionList.addEventListener("change", syncSubmitEnabled);
+        syncSubmitEnabled();
       }
 
-      // 显示错误
-      function showError(message) {
-        $("#optionList").html(`
-          <div class="alert alert-danger">
-            <i class="fa fa-times-circle"></i> ${message}
-          </div>
-        `);
-      }
-
-      // 倒计时功能
       function initCountdown() {
         let timeLeft = 10 * 60;
-        const countdownInterval = setInterval(() => {
+        const countdownEl = document.getElementById("countdown");
+
+        const timer = setInterval(() => {
           const minutes = Math.floor(timeLeft / 60);
           const seconds = timeLeft % 60;
-          $("#countdown").text(
-            `${minutes.toString().padStart(2, "0")}:${seconds
-              .toString()
-              .padStart(2, "0")}`
-          );
+          countdownEl.textContent =
+            `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
 
           if (timeLeft <= 0) {
-            clearInterval(countdownInterval);
-            submitAnswer();
+            clearInterval(timer);
+            submitAnswer(); // 时间到自动提交（无选择会提示）
           }
-          timeLeft--;
+          timeLeft -= 1;
         }, 1000);
       }
 
-      // 提交答案
-      function submitAnswer() {
-        const selectedOptions = $('input[name="user_answer"]:checked');
-        if (selectedOptions.length === 0) {
+      async function submitAnswer() {
+        const userAnswers = getSelectedAnswer();
+        if (!userAnswers) {
           alert("请选择答案后提交！");
           return false;
         }
 
-        const userAnswers = Array.from(selectedOptions)
-          .map((option) => option.value)
-          .join("");
+        const submitBtn = document.getElementById("submitBtn");
+        const submitSpinner = document.getElementById("submitSpinner");
+        submitBtn.disabled = true;
+        submitSpinner.classList.remove("d-none");
 
-        $("#submitBtn").prop("disabled", true);
-        $("#submitSpinner").removeClass("d-none");
+        try {
+          const res = await fetch(`${API_BASE}/submit_answer`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              question_id: Number(questionId),
+              user_answer: userAnswers,
+            }),
+          });
 
-        $.ajax({
-          url: `${API_BASE}/submit_answer`,
-          method: "POST",
-          contentType: "application/json",
-          data: JSON.stringify({
-            question_id: questionId,
-            user_answer: userAnswers,
-          }),
-          success: function (response) {
-            $("#submitSpinner").addClass("d-none");
-            if (response.success) {
-              // 跳转到解析页
-              window.location.href = `/question/explanation/${questionId}?user_answer=${userAnswers}`;
-            } else {
-              alert(response.msg);
-              $("#submitBtn").prop("disabled", false);
-            }
-          },
-          error: function () {
-            $("#submitSpinner").addClass("d-none");
+          const payload = await res.json().catch(() => null);
+
+          submitSpinner.classList.add("d-none");
+
+          if (!res.ok || !payload) {
             alert("提交失败，请检查网络连接");
-            $("#submitBtn").prop("disabled", false);
-          },
-        });
+            submitBtn.disabled = false;
+            return false;
+          }
+
+          if (payload.success) {
+            window.location.href = `/question/explanation/${questionId}?user_answer=${encodeURIComponent(userAnswers)}`;
+            return true;
+          }
+
+          alert(payload.msg || "提交失败");
+          submitBtn.disabled = false;
+          return false;
+        } catch (e) {
+          console.error(e);
+          submitSpinner.classList.add("d-none");
+          alert("提交失败，请检查网络连接");
+          submitBtn.disabled = false;
+          return false;
+        }
       }
 
       // 表单提交事件
-      $("#answerForm").on("submit", function (e) {
+      document.getElementById("answerForm").addEventListener("submit", function (e) {
         e.preventDefault();
         submitAnswer();
       });
 
       // 页面加载初始化
-      $(document).ready(function () {
+      document.addEventListener("DOMContentLoaded", function () {
         loadQuestionDetail();
         initCountdown();
       });

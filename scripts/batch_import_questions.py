@@ -1,106 +1,140 @@
 # -*- coding: utf-8 -*-
 """
-批量导入题目脚本
-支持从JSON文件批量导入题目到数据库
+批量导入题目脚本（单机版）
+- 从 JSON 导入到 database/interview.db
+- 自动创建所需表：questions / answers
+JSON格式：[{category,title,option_a..d,correct_answer,difficulty,is_high_frequency,analysis,knowledge_point}, ...]
 """
-import os
-import sys
+from __future__ import annotations
+
 import json
-from datetime import datetime
+import os
+import sqlite3
+import sys
+from typing import Any, Dict, List, Tuple
 
-# 添加项目根目录到路径
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-if project_root not in sys.path:
-    sys.path.insert(0, project_root)
-
-from app.database.db_manager import DBManager
-from app.core.question_bank import QuestionBank
-from app.utils.logger import Logger
-
-logger = Logger()
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+DB_PATH = os.path.join(PROJECT_ROOT, "database", "interview.db")
 
 
-def import_from_json(json_file: str):
+def _connect() -> sqlite3.Connection:
+    os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
+    conn = sqlite3.connect(DB_PATH)
+    conn.row_factory = sqlite3.Row
+    conn.execute("PRAGMA foreign_keys = ON;")
+    return conn
+
+
+def _init_schema(conn: sqlite3.Connection) -> None:
+    conn.executescript(
+        """
+        CREATE TABLE IF NOT EXISTS users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            username TEXT UNIQUE,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        );
+
+        CREATE TABLE IF NOT EXISTS questions (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            category TEXT NOT NULL,
+            title TEXT NOT NULL,
+            option_a TEXT,
+            option_b TEXT,
+            option_c TEXT,
+            option_d TEXT,
+            difficulty TEXT DEFAULT 'Easy',
+            is_high_frequency INTEGER DEFAULT 0
+        );
+
+        CREATE TABLE IF NOT EXISTS answers (
+            question_id INTEGER PRIMARY KEY,
+            correct_answer TEXT NOT NULL,
+            analysis TEXT,
+            knowledge_point TEXT,
+            FOREIGN KEY(question_id) REFERENCES questions(id) ON DELETE CASCADE
+        );
+        """
+    )
+    # 单机默认用户（便于统计 total_users）
+    conn.execute("INSERT OR IGNORE INTO users(id, username) VALUES(1, 'local_user');")
+
+
+def import_from_json(json_file: str) -> bool:
     """从JSON文件导入题目"""
     try:
-        with open(json_file, 'r', encoding='utf-8') as f:
+        with open(json_file, "r", encoding="utf-8") as f:
             data = json.load(f)
-        
+
         if not isinstance(data, list):
             print("错误：JSON文件应该包含一个题目数组")
             return False
-        
-        db_manager = DBManager()
-        
-        success_count = 0
-        fail_count = 0
-        
-        print(f"\n开始导入 {len(data)} 道题目...\n")
-        
-        for idx, question_data in enumerate(data, 1):
-            try:
-                # 验证必需字段
-                required_fields = ['title', 'option_a', 'option_b', 'option_c', 'option_d', 'correct_answer']
-                missing_fields = [f for f in required_fields if f not in question_data]
-                
-                if missing_fields:
-                    print(f"题目 {idx}: 缺少必需字段 {missing_fields}，跳过")
+
+        conn = _connect()
+        try:
+            _init_schema(conn)
+            success_count = 0
+            fail_count = 0
+
+            print(f"\n开始导入 {len(data)} 道题目到 {DB_PATH}\n")
+
+            for idx, q in enumerate(data, 1):
+                try:
+                    required = ["title", "option_a", "option_b", "option_c", "option_d", "correct_answer"]
+                    missing = [k for k in required if k not in q]
+                    if missing:
+                        print(f"题目 {idx}: 缺少必需字段 {missing}，跳过")
+                        fail_count += 1
+                        continue
+
+                    category = str(q.get("category", "Python Basics")).strip() or "Python Basics"
+                    title = str(q.get("title", "")).strip()
+                    option_a = str(q.get("option_a", "")).strip()
+                    option_b = str(q.get("option_b", "")).strip()
+                    option_c = str(q.get("option_c", "")).strip()
+                    option_d = str(q.get("option_d", "")).strip()
+                    difficulty = str(q.get("difficulty", "Easy")).strip() or "Easy"
+                    is_high_frequency = 1 if bool(q.get("is_high_frequency", False)) else 0
+
+                    cur = conn.execute(
+                        """
+                        INSERT INTO questions(category,title,option_a,option_b,option_c,option_d,difficulty,is_high_frequency)
+                        VALUES(?,?,?,?,?,?,?,?)
+                        """,
+                        (category, title, option_a, option_b, option_c, option_d, difficulty, is_high_frequency),
+                    )
+                    question_id = cur.lastrowid
+
+                    correct_answer = str(q.get("correct_answer", "")).strip().upper()
+                    analysis = str(q.get("analysis", "")).strip()
+                    knowledge_point = str(q.get("knowledge_point", "")).strip()
+
+                    if correct_answer:
+                        conn.execute(
+                            """
+                            INSERT INTO answers(question_id, correct_answer, analysis, knowledge_point)
+                            VALUES(?,?,?,?)
+                            """,
+                            (question_id, correct_answer, analysis, knowledge_point),
+                        )
+
+                    conn.commit()
+                    success_count += 1
+
+                    if idx % 10 == 0:
+                        print(f"已导入 {idx}/{len(data)} 道题目...")
+
+                except Exception as e:
+                    conn.rollback()
                     fail_count += 1
-                    continue
-                
-                # 设置默认值
-                category = question_data.get('category', 'Python Basics')
-                title = question_data.get('title', '')
-                option_a = question_data.get('option_a', '')
-                option_b = question_data.get('option_b', '')
-                option_c = question_data.get('option_c', '')
-                option_d = question_data.get('option_d', '')
-                difficulty = question_data.get('difficulty', 'Easy')
-                is_high_frequency = int(question_data.get('is_high_frequency', False))
-                
-                # 直接插入题目（不包含时间字段，因为数据库表可能没有）
-                sql = """INSERT INTO questions 
-                         (category, title, option_a, option_b, option_c, option_d, 
-                          difficulty, is_high_frequency)
-                         VALUES (?, ?, ?, ?, ?, ?, ?, ?)"""
-                
-                cursor = db_manager.execute(sql, (
-                    category, title, option_a, option_b, option_c, option_d, 
-                    difficulty, is_high_frequency
-                ))
-                question_id = cursor.lastrowid
-                
-                # 插入答案
-                correct_answer = question_data.get('correct_answer', '')
-                analysis = question_data.get('analysis', '')
-                knowledge_point = question_data.get('knowledge_point', '')
-                
-                if correct_answer:
-                    answer_sql = """INSERT INTO answers 
-                                    (question_id, correct_answer, analysis, knowledge_point)
-                                    VALUES (?, ?, ?, ?)"""
-                    db_manager.execute(answer_sql, (
-                        question_id, correct_answer, analysis, knowledge_point
-                    ))
-                
-                db_manager.commit()
-                
-                success_count += 1
-                if idx % 10 == 0:
-                    print(f"已导入 {idx}/{len(data)} 道题目...")
-                    
-            except Exception as e:
-                fail_count += 1
-                db_manager.rollback()
-                print(f"题目 {idx}: 导入失败 - {e}")
-        
-        print(f"\n导入完成！")
-        print(f"成功: {success_count} 道")
-        print(f"失败: {fail_count} 道")
-        
-        db_manager.close()
-        return True
-        
+                    print(f"题目 {idx}: 导入失败 - {e}")
+
+            print("\n导入完成！")
+            print(f"成功: {success_count} 道")
+            print(f"失败: {fail_count} 道")
+            return True
+        finally:
+            conn.close()
+
     except FileNotFoundError:
         print(f"错误：文件不存在 - {json_file}")
         return False
@@ -112,7 +146,7 @@ def import_from_json(json_file: str):
         return False
 
 
-def create_sample_json(output_file: str = 'sample_questions.json'):
+def create_sample_json(output_file: str = "sample_questions.json") -> None:
     """创建示例JSON文件"""
     sample_questions = [
         {
@@ -181,15 +215,15 @@ def create_sample_json(output_file: str = 'sample_questions.json'):
             "knowledge_point": "算法 - 排序算法复杂度"
         }
     ]
-    
-    with open(output_file, 'w', encoding='utf-8') as f:
+
+    with open(output_file, "w", encoding="utf-8") as f:
         json.dump(sample_questions, f, ensure_ascii=False, indent=2)
-    
+
     print(f"示例文件已创建: {output_file}")
     print(f"包含 {len(sample_questions)} 道示例题目")
 
 
-def main():
+def main() -> None:
     """主函数"""
     if len(sys.argv) < 2:
         print("批量导入题目工具")
@@ -213,9 +247,9 @@ def main():
         print("    }")
         print("  ]")
         return
-    
-    if sys.argv[1] == '--sample':
-        output_file = sys.argv[2] if len(sys.argv) > 2 else 'sample_questions.json'
+
+    if sys.argv[1] == "--sample":
+        output_file = sys.argv[2] if len(sys.argv) > 2 else "sample_questions.json"
         create_sample_json(output_file)
     else:
         json_file = sys.argv[1]
@@ -223,10 +257,9 @@ def main():
             print(f"错误：文件不存在 - {json_file}")
             print("提示：使用 --sample 参数创建示例文件")
             return
-        
         import_from_json(json_file)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
 

@@ -1,0 +1,306 @@
+[
+  {
+    "title": "Python 中 dict 查找键的平均时间复杂度是？",
+    "content": "关于 Python 字典（dict）的键查找复杂度，下列哪项正确？",
+    "options": {
+      "A": "O(1)（平均）",
+      "B": "O(log n)",
+      "C": "O(n)",
+      "D": "O(n log n)"
+    },
+    "correct_answer": "A",
+    "category": "Python Basics",
+    "difficulty": "Easy",
+    "tags": ["python", "dict", "complexity", "easy"],
+    "created_at": "2026-01-03 17:16:21",
+    "frequency": 0
+  },
+  {
+    "title": "列表 append 的均摊时间复杂度通常是？",
+    "content": "关于 Python list 的 append 操作，下列哪项最符合实际实现？",
+    "options": {
+      "A": "O(n)",
+      "B": "O(1)（均摊）",
+      "C": "O(log n)",
+      "D": "O(n log n)"
+    },
+    "correct_answer": "B",
+    "category": "Python Basics",
+    "difficulty": "Easy",
+    "tags": ["python", "list", "complexity", "easy"],
+    "created_at": "2026-01-03 17:16:21",
+    "frequency": 0
+  },
+  {
+    "title": "请指出下面代码的输出：print(sum([i for i in range(3)]))",
+    "content": "print(sum([i for i in range(3)]))",
+    "options": {
+      "A": "0",
+      "B": "3",
+      "C": "6",
+      "D": "报错"
+    },
+    "correct_answer": "B",
+    "category": "Python Basics",
+    "difficulty": "Easy",
+    "tags": ["python", "output", "easy"],
+    "created_at": "2026-01-03 17:16:21",
+    "frequency": 0
+  },
+  {
+    "title": "请指出下面代码的输出：def f(x): return x*x; print(f(3))",
+    "content": "def f(x):\n    return x*x\nprint(f(3))",
+    "options": {
+      "A": "6",
+      "B": "8",
+      "C": "9",
+      "D": "12"
+    },
+    "correct_answer": "C",
+    "category": "Python Basics",
+    "difficulty": "Easy",
+    "tags": ["python", "function", "output", "easy"],
+    "created_at": "2026-01-03 17:16:21",
+    "frequency": 0
+  },
+  {
+    "title": "请指出下面代码的输出：a=[1,2,3]; print(a[::-1])",
+    "content": "a = [1,2,3]\nprint(a[::-1])",
+    "options": {
+      "A": "[1, 2, 3]",
+      "B": "[2, 3, 1]",
+      "C": "[3, 2, 1]",
+      "D": "报错"
+    },
+    "correct_answer": "C",
+    "category": "Python Basics",
+    "difficulty": "Easy",
+    "tags": ["python", "slice", "output", "easy"],
+    "created_at": "2026-01-03 17:16:21",
+    "frequency": 0
+  },
+  {
+    "title": "二分查找（Binary Search）的时间复杂度是？",
+    "content": "在有序数组上进行二分查找，时间复杂度通常为：",
+    "options": {
+      "A": "O(1)",
+      "B": "O(log n)",
+      "C": "O(n)",
+      "D": "O(n log n)"
+    },
+    "correct_answer": "B",
+    "category": "Algorithm",
+    "difficulty": "Easy",
+    "tags": ["algorithm", "binary-search", "easy"],
+    "created_at": "2026-01-03 17:16:21",
+    "frequency": 0
+  },
+  {
+    "title": "快速排序（Quick Sort）的平均时间复杂度是？",
+    "content": "关于快速排序的平均时间复杂度，下列哪项正确？",
+    "options": {
+      "A": "O(n)",
+      "B": "O(n log n)",
+      "C": "O(log n)",
+      "D": "O(n^2)"
+    },
+    "correct_answer": "B",
+    "category": "Algorithm",
+    "difficulty": "Medium",
+    "tags": ["algorithm", "sorting", "medium"],
+    "created_at": "2026-01-03 17:16:21",
+    "frequency": 0
+  },
+  {
+    "title": "哈希冲突会导致 dict 查找退化到什么复杂度？",
+    "content": "在极端哈希冲突（或攻击性输入）下，哈希表操作可能退化为：",
+    "options": {
+      "A": "O(1)",
+      "B": "O(log n)",
+      "C": "O(n)",
+      "D": "O(n log n)"
+    },
+    "correct_answer": "C",
+    "category": "Data Structure",
+    "difficulty": "Medium",
+    "tags": ["data-structure", "hash", "medium"],
+    "created_at": "2026-01-03 17:16:21",
+    "frequency": 0
+  },
+  {
+    "title": "队列（Queue）最适合用来实现什么？",
+    "content": "以下哪项最常见地使用队列来实现？",
+    "options": {
+      "A": "深度优先搜索（DFS）",
+      "B": "广度优先搜索（BFS）",
+      "C": "快速排序",
+      "D": "二分查找"
+    },
+    "correct_answer": "B",
+    "category": "Data Structure",
+    "difficulty": "Easy",
+    "tags": ["data-structure", "queue", "bfs", "easy"],
+    "created_at": "2026-01-03 17:16:21",
+    "frequency": 0
+  },
+  {
+    "title": "栈（Stack）最典型的应用场景是？",
+    "content": "以下哪项最符合栈的 LIFO 特性？",
+    "options": {
+      "A": "函数调用栈/递归",
+      "B": "BFS 遍历",
+      "C": "LRU 缓存",
+      "D": "哈希索引"
+    },
+    "correct_answer": "A",
+    "category": "Data Structure",
+    "difficulty": "Easy",
+    "tags": ["data-structure", "stack", "easy"],
+    "created_at": "2026-01-03 17:16:21",
+    "frequency": 0
+  },
+  {
+    "title": "SQL 注入防护的最佳实践是？",
+    "content": "以下哪项是防止 SQL 注入的最佳实践？",
+    "options": {
+      "A": "拼接字符串构造 SQL",
+      "B": "使用参数化查询/预编译语句",
+      "C": "把输入全部转成大写",
+      "D": "把所有单引号删除"
+    },
+    "correct_answer": "B",
+    "category": "Database",
+    "difficulty": "Easy",
+    "tags": ["database", "security", "sql-injection", "easy"],
+    "created_at": "2026-01-03 17:16:21",
+    "frequency": 0
+  },
+  {
+    "title": "为什么要为查询条件建立索引？",
+    "content": "数据库索引最主要的目的是什么？",
+    "options": {
+      "A": "减少磁盘空间占用",
+      "B": "加快查询速度（代价是写入/更新变慢）",
+      "C": "保证数据不重复",
+      "D": "自动进行数据备份"
+    },
+    "correct_answer": "B",
+    "category": "Database",
+    "difficulty": "Easy",
+    "tags": ["database", "index", "easy"],
+    "created_at": "2026-01-03 17:16:21",
+    "frequency": 0
+  },
+  {
+    "title": "事务（Transaction）的 ACID 中，I 代表什么？",
+    "content": "数据库事务的 ACID 特性里，I 的含义是：",
+    "options": {
+      "A": "Integrity（完整性）",
+      "B": "Isolation（隔离性）",
+      "C": "Index（索引）",
+      "D": "Iteration（迭代）"
+    },
+    "correct_answer": "B",
+    "category": "Database",
+    "difficulty": "Medium",
+    "tags": ["database", "transaction", "acid", "medium"],
+    "created_at": "2026-01-03 17:16:21",
+    "frequency": 0
+  },
+  {
+    "title": "Flask 中 @app.route 的作用是？",
+    "content": "在 Flask 中，@app.route('/path') 的主要作用是什么？",
+    "options": {
+      "A": "注册 URL 路由到视图函数",
+      "B": "配置数据库连接池",
+      "C": "启用 CORS",
+      "D": "创建后台任务队列"
+    },
+    "correct_answer": "A",
+    "category": "Flask Framework",
+    "difficulty": "Easy",
+    "tags": ["flask", "routing", "easy"],
+    "created_at": "2026-01-03 17:16:21",
+    "frequency": 0
+  },
+  {
+    "title": "Flask 的最佳实践：如何组织大型项目？",
+    "content": "当 Flask 项目变大时，以下哪种组织方式通常更推荐？",
+    "options": {
+      "A": "把所有代码都写在 app.py 一个文件里",
+      "B": "使用 Blueprint（蓝图）拆分模块",
+      "C": "把所有路由写到模板文件里",
+      "D": "每个请求都新建一个 Flask app"
+    },
+    "correct_answer": "B",
+    "category": "Flask Framework",
+    "difficulty": "Medium",
+    "tags": ["flask", "blueprint", "best-practice", "medium"],
+    "created_at": "2026-01-03 17:16:21",
+    "frequency": 0
+  },
+  {
+    "title": "Flask 调试模式（debug=True）在生产环境是否推荐？",
+    "content": "关于 Flask debug 模式，下列哪项正确？",
+    "options": {
+      "A": "生产环境推荐开启，性能更好",
+      "B": "生产环境不推荐开启，存在安全风险",
+      "C": "只影响日志，不影响安全",
+      "D": "开启后会自动启用 WAF"
+    },
+    "correct_answer": "B",
+    "category": "Flask Framework",
+    "difficulty": "Easy",
+    "tags": ["flask", "security", "easy"],
+    "created_at": "2026-01-03 17:16:21",
+    "frequency": 0
+  },
+  {
+    "title": "时间复杂度的含义是？",
+    "content": "算法时间复杂度通常描述的是什么？",
+    "options": {
+      "A": "算法运行时的内存占用",
+      "B": "算法随输入规模增长的运行时间增长趋势",
+      "C": "CPU 的主频",
+      "D": "代码行数"
+    },
+    "correct_answer": "B",
+    "category": "Algorithm",
+    "difficulty": "Easy",
+    "tags": ["algorithm", "complexity", "easy"],
+    "created_at": "2026-01-03 17:16:21",
+    "frequency": 0
+  },
+  {
+    "title": "为什么不建议在循环中频繁执行数据库单条写入？",
+    "content": "以下哪项是更合理的解释？",
+    "options": {
+      "A": "会导致 SQL 语法失效",
+      "B": "网络/事务开销大，建议批量写入或使用事务",
+      "C": "会自动删除表",
+      "D": "会让索引永久失效"
+    },
+    "correct_answer": "B",
+    "category": "Database",
+    "difficulty": "Medium",
+    "tags": ["database", "performance", "transaction", "medium"],
+    "created_at": "2026-01-03 17:16:21",
+    "frequency": 0
+  },
+  {
+    "title": "链表相对数组的典型优势是？",
+    "content": "以下哪项是链表相对数组（动态数组）的典型优势？",
+    "options": {
+      "A": "随机访问更快",
+      "B": "在已知节点位置时插入/删除更方便",
+      "C": "占用更少内存",
+      "D": "更适合二分查找"
+    },
+    "correct_answer": "B",
+    "category": "Data Structure",
+    "difficulty": "Medium",
+    "tags": ["data-structure", "linked-list", "medium"],
+    "created_at": "2026-01-03 17:16:21",
+    "frequency": 0
+  }
+]

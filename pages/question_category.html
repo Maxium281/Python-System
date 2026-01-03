@@ -5,6 +5,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- qc-template-marker: question_category.html -->
+    <meta name="qc-template" content="pages/question_category.html" />
     <title>题库分类 - Python面试题学习系统</title>
     <link
       rel="stylesheet"
@@ -15,7 +17,7 @@
       href="{{ url_for('static', filename='css/custom.css') }}"
     />
   </head>
-  <body>
+  <body data-qc-template="pages/question_category.html">
     <!-- 导航栏 -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container">
@@ -49,7 +51,7 @@
                 >模拟面试</a
               >
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">我的进度</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('progress.progress') }}">我的进度</a></li>
           </ul>
         </div>
       </div>
@@ -174,110 +176,157 @@
       // API基础URL
       const API_BASE = "/question/api";
 
-      // 加载题目列表
-      function loadQuestions(category, containerId, countId) {
-        // 显示加载状态
-        $(`#${containerId}`).html(`
+      function setLoading(containerId, spinnerColorClass) {
+        const el = document.getElementById(containerId);
+        if (!el) return;
+        el.innerHTML = `
           <div class="text-center py-4">
-            <div class="spinner-border text-primary" role="status">
+            <div class="spinner-border ${spinnerColorClass}" role="status">
               <span class="visually-hidden">加载中...</span>
             </div>
             <p class="mt-2 text-muted">正在加载题目...</p>
           </div>
-        `);
-        
-        $.ajax({
-          url: `${API_BASE}/questions`,
-          method: "GET",
-          data: { category: category },
-          timeout: 10000,
-          success: function (response) {
-            if (response.success) {
-              renderQuestionList(containerId, response.data);
-              $(`#${countId}`).text(`${response.data.length} 题`);
-            } else {
-              $(`#${containerId}`).html(`
-                <div class="alert alert-warning">
-                  <i class="fa fa-exclamation-triangle"></i> ${response.msg || '加载失败'}
-                </div>
-              `);
-            }
-          },
-          error: function (xhr, status, error) {
-            console.error('API请求失败:', status, error, xhr.responseText);
-            $(`#${containerId}`).html(`
-              <div class="alert alert-danger">
-                <i class="fa fa-times-circle"></i> 网络请求失败: ${error || status}
-                <br><small>请检查后端服务是否正常运行</small>
-              </div>
-            `);
-          },
-        });
+        `;
       }
 
-      // 渲染题目列表
+      function setAlert(containerId, type, htmlText) {
+        const el = document.getElementById(containerId);
+        if (!el) return;
+        el.innerHTML = `<div class="alert alert-${type}">${htmlText}</div>`;
+      }
+
+      function categoryBadge(category) {
+        const c = category || "";
+        let badgeClass = "bg-secondary";
+        let text = c;
+
+        if (c.includes("Python Basics") || c.includes("基础")) {
+          badgeClass = "bg-primary";
+          text = "基础";
+        } else if (c.includes("Flask") || c.includes("框架")) {
+          badgeClass = "bg-success";
+          text = "框架";
+        } else if (c.includes("Project") || c.includes("项目")) {
+          badgeClass = "bg-warning";
+          text = "项目";
+        }
+        return { badgeClass, text };
+      }
+
+      function escapeHtml(s) {
+        return String(s ?? "")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#39;");
+      }
+
       function renderQuestionList(containerId, questions) {
-        const container = $(`#${containerId}`);
-        if (questions.length === 0) {
-          container.html(`
+        const el = document.getElementById(containerId);
+        if (!el) return;
+
+        if (!Array.isArray(questions) || questions.length === 0) {
+          el.innerHTML = `
             <div class="alert alert-info">
               <i class="fa fa-info-circle"></i> 该分类下暂无题目
             </div>
-          `);
+          `;
           return;
         }
 
         let html = "";
-        questions.forEach((question) => {
-          // 根据实际分类名称设置样式
-          const category = question.category || "";
-          let badgeClass = "bg-secondary";
-          let categoryText = category;
-          
-          if (category.includes("Python Basics") || category.includes("基础")) {
-            badgeClass = "bg-primary";
-            categoryText = "基础";
-          } else if (category.includes("Flask") || category.includes("框架")) {
-            badgeClass = "bg-success";
-            categoryText = "框架";
-          } else if (category.includes("Project") || category.includes("项目")) {
-            badgeClass = "bg-warning";
-            categoryText = "项目";
-          } else {
-            categoryText = category;
-          }
-
+        for (const q of questions) {
+          const b = categoryBadge(q.category);
           html += `
             <li class="list-group-item d-flex justify-content-between align-items-center">
-              <a href="/question/detail/${question.id}" class="text-decoration-none flex-grow-1">
-                ${question.id}. ${question.title}
+              <a href="/question/detail/${q.id}" class="text-decoration-none flex-grow-1">
+                ${q.id}. ${escapeHtml(q.title)}
               </a>
-              <span class="badge ${badgeClass} rounded-pill">${categoryText}</span>
+              <span class="badge ${b.badgeClass} rounded-pill">${escapeHtml(b.text)}</span>
             </li>
           `;
-        });
-
-        container.html(html);
+        }
+        el.innerHTML = html;
       }
 
-      // 页面加载后初始化
-      $(document).ready(function () {
-        // 初始加载基础语法题目
-        loadQuestions("basic", "basicQuestionList", "basicCount");
+      async function loadQuestions(category, containerId, countId, spinnerColorClass) {
+        setLoading(containerId, spinnerColorClass);
 
-        // 标签页切换事件
-        $("#basic-tab").on("click", function () {
-          loadQuestions("basic", "basicQuestionList", "basicCount");
+        const countEl = document.getElementById(countId);
+        if (countEl) countEl.textContent = "加载中...";
+
+        try {
+          const url = `${API_BASE}/questions?category=${encodeURIComponent(category)}`;
+          const res = await fetch(url, { method: "GET", cache: "no-store" });
+
+          if (!res.ok) {
+            setAlert(
+              containerId,
+              "danger",
+              `<i class="fa fa-times-circle"></i> 请求失败：HTTP ${res.status}`
+            );
+            return;
+          }
+
+          const payload = await res.json();
+
+          // 兼容两种返回：
+          // 1) {success:true, data:[...]}
+          // 2) {data:[...]}
+          const list = payload?.data;
+          const ok = payload && (payload.success === true || Array.isArray(list));
+
+          if (!ok) {
+            setAlert(
+              containerId,
+              "warning",
+              `<i class="fa fa-exclamation-triangle"></i> ${escapeHtml(payload?.msg || "加载失败")}`
+            );
+            return;
+          }
+
+          renderQuestionList(containerId, list || []);
+          if (countEl) countEl.textContent = `${(list || []).length} 题`;
+        } catch (e) {
+          console.error("加载题目异常:", e);
+          setAlert(
+            containerId,
+            "danger",
+            `<i class="fa fa-times-circle"></i> 网络请求失败<br><small>请检查后端服务是否正常运行</small>`
+          );
+        }
+      }
+
+      // 让你随时能在 Console 手动触发（即使错过了启动时机）
+      window.loadQuestions = loadQuestions;
+
+      function boot() {
+        // 持久标记：不依赖 console，也能在 Elements 里看到 <html data-qc-boot="1">
+        document.documentElement.setAttribute("data-qc-boot", "1");
+
+        // 如果你打开控制台太晚，看不到日志；所以这里不依赖日志判断是否执行
+        loadQuestions("basic", "basicQuestionList", "basicCount", "text-primary");
+
+        document.getElementById("basic-tab")?.addEventListener("click", function () {
+          loadQuestions("basic", "basicQuestionList", "basicCount", "text-primary");
         });
 
-        $("#framework-tab").on("click", function () {
-          loadQuestions("framework", "frameworkQuestionList", "frameworkCount");
+        document.getElementById("framework-tab")?.addEventListener("click", function () {
+          loadQuestions("framework", "frameworkQuestionList", "frameworkCount", "text-success");
         });
 
-        $("#project-tab").on("click", function () {
-          loadQuestions("project", "projectQuestionList", "projectCount");
+        document.getElementById("project-tab")?.addEventListener("click", function () {
+          loadQuestions("project", "projectQuestionList", "projectCount", "text-warning");
         });
-      });
+      }
+
+      // 更稳：避免错过 DOMContentLoaded
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", boot);
+      } else {
+        boot();
+      }
     </script>
   </body>
 </html>

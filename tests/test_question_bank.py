@@ -10,9 +10,10 @@ def test_get_question_by_id(db_manager):
 
 def test_get_questions_by_category(db_manager):
     qb = QuestionBank(db_manager)
-    lst = qb.get_questions_by_category('Python Basics')
-    assert isinstance(lst, list)
-    assert any(item['category'] == 'Python Basics' for item in lst)
+    res = qb.get_questions_by_category('Python Basics')
+    assert isinstance(res, dict)
+    questions = res.get('questions', [])
+    assert any(item['category'] == 'Python Basics' for item in questions)
 
 def test_search_question(db_manager):
     qb = QuestionBank(db_manager)

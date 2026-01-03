@@ -646,3 +646,183 @@ Params: (1,)
 2025-12-28 17:39:52 - interview_system - INFO - logger.py:111 - 静态资源检查通过
 2025-12-28 17:39:52 - interview_system - INFO - logger.py:111 - 本地资源检查完成
 2025-12-28 17:39:52 - interview_system - INFO - logger.py:111 - Flask app initialized successfully
+2025-12-28 17:58:54 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:58:54 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:58:54 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 17:58:54 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 20:00:39 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 20:00:39 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 20:00:39 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 20:00:39 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 20:00:39 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 20:00:39 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 20:00:39 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 20:00:39 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 20:00:39 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 20:00:39 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 20:00:39 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 20:00:39 - interview_system - INFO - logger.py:111 - 静态资源检查通过
+2025-12-28 20:00:39 - interview_system - INFO - logger.py:111 - 本地资源检查完成
+2025-12-28 20:00:39 - interview_system - INFO - logger.py:111 - Flask app initialized successfully
+2025-12-28 20:06:51 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 20:06:51 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 20:06:51 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 20:06:51 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 20:06:51 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 20:06:51 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 20:06:51 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 20:06:51 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 20:06:51 - interview_system - INFO - logger.py:111 - ???12???
+2025-12-28 20:06:51 - interview_system - INFO - logger.py:111 - 已启用WAL模式
+2025-12-28 20:06:51 - interview_system - INFO - logger.py:111 - 数据库连接已建立: D:\wfx\pthon大作业\Python-System\database\interview.db
+2025-12-28 20:06:51 - interview_system - INFO - logger.py:111 - 静态资源检查通过
+2025-12-28 20:06:51 - interview_system - INFO - logger.py:111 - 本地资源检查完成
+2025-12-28 20:06:51 - interview_system - INFO - logger.py:111 - Flask app initialized successfully
+2025-12-28 20:13:49 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 20:13:49 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 20:13:49 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 20:13:49 - interview_system - INFO - logger.py:111 - 数据库连接已关闭
+2025-12-28 20:14:16 - interview_system - WARNING - logger.py:115 - ?????????????????: 'DBManager' object has no attribute 'fetchall'
+2025-12-28 20:14:16 - interview_system - WARNING - logger.py:115 - ?????????????????: 'DBManager' object has no attribute 'fetchall'
+2025-12-28 20:14:16 - interview_system - WARNING - logger.py:115 - ?????????????????: 'DBManager' object has no attribute 'fetchall'
+2025-12-28 20:14:16 - interview_system - INFO - logger.py:111 - 静态资源检查通过
+2025-12-28 20:14:16 - interview_system - INFO - logger.py:111 - 本地资源检查完成
+2025-12-28 20:14:16 - interview_system - INFO - logger.py:111 - Flask app initialized successfully
+2025-12-28 20:14:23 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: 'DBManager' object has no attribute 'fetchone'
+2025-12-28 20:14:27 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: 'DBManager' object has no attribute 'fetchone'
+2025-12-28 20:14:30 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: 'DBManager' object has no attribute 'fetchone'
+2026-01-03 16:38:41 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:38:41 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:38:41 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:44:19 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:44:19 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:44:19 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:44:25 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:44:25 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:44:25 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:44:25 - interview_system - INFO - logger.py:111 - ???12???
+2026-01-03 16:44:25 - interview_system - WARNING - logger.py:115 - 可用题目数量(1)少于请求数量(20)
+2026-01-03 16:44:25 - interview_system - INFO - logger.py:111 - 生成考试，题目数量: 1, 考试ID: 1767429865
+2026-01-03 16:44:25 - interview_system - INFO - logger.py:111 - 考试开始，ID: 1767429865, 时间限制: 1800秒
+2026-01-03 16:44:25 - interview_system - INFO - logger.py:111 - 考试结束，ID: 1767429865, 耗时: 0.00秒
+2026-01-03 16:44:25 - interview_system - INFO - logger.py:111 - ???12???
+2026-01-03 16:44:25 - interview_system - ERROR - logger.py:119 - ??????: 'sqlite3.Row' object has no attribute 'get'
+2026-01-03 16:44:25 - interview_system - INFO - logger.py:111 - ???12???
+2026-01-03 16:44:25 - interview_system - INFO - logger.py:111 - ???12???
+2026-01-03 16:44:25 - interview_system - INFO - logger.py:111 - ???1???????: print
+2026-01-03 16:44:25 - interview_system - INFO - logger.py:111 - ???12???
+2026-01-03 16:44:25 - interview_system - INFO - logger.py:111 - ???12???
+2026-01-03 16:44:25 - interview_system - ERROR - logger.py:119 - ??????: 'sqlite3.Row' object has no attribute 'get'
+2026-01-03 16:44:25 - interview_system - WARNING - logger.py:115 - 题目ID 1 不存在
+2026-01-03 16:44:25 - interview_system - INFO - logger.py:111 - ???12???
+2026-01-03 16:44:25 - interview_system - ERROR - logger.py:119 - ??????: 'sqlite3.Row' object has no attribute 'get'
+2026-01-03 16:44:25 - interview_system - WARNING - logger.py:115 - 题目ID 2 不存在
+2026-01-03 16:44:25 - interview_system - ERROR - logger.py:119 - 获取错题列表失败: no such column: ur.user_id
+2026-01-03 16:44:25 - interview_system - ERROR - logger.py:119 - 添加收藏失败: no such column: user_id
+2026-01-03 16:45:55 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:45:55 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:45:55 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:45:55 - interview_system - INFO - logger.py:111 - ???12???
+2026-01-03 16:45:55 - interview_system - WARNING - logger.py:115 - 可用题目数量(1)少于请求数量(20)
+2026-01-03 16:45:55 - interview_system - INFO - logger.py:111 - 生成考试，题目数量: 1, 考试ID: 1767429955
+2026-01-03 16:45:55 - interview_system - INFO - logger.py:111 - 考试开始，ID: 1767429955, 时间限制: 1800秒
+2026-01-03 16:45:55 - interview_system - INFO - logger.py:111 - 考试结束，ID: 1767429955, 耗时: 0.00秒
+2026-01-03 16:45:55 - interview_system - INFO - logger.py:111 - 考试记录已保存，ID: 1767429955, 得分: 100.0分
+2026-01-03 16:46:03 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:46:03 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:46:03 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:46:03 - interview_system - INFO - logger.py:111 - ???12???
+2026-01-03 16:46:03 - interview_system - WARNING - logger.py:115 - 可用题目数量(1)少于请求数量(20)
+2026-01-03 16:46:03 - interview_system - INFO - logger.py:111 - 生成考试，题目数量: 1, 考试ID: 1767429963
+2026-01-03 16:46:03 - interview_system - INFO - logger.py:111 - 考试开始，ID: 1767429963, 时间限制: 1800秒
+2026-01-03 16:46:03 - interview_system - INFO - logger.py:111 - 考试结束，ID: 1767429963, 耗时: 0.00秒
+2026-01-03 16:46:03 - interview_system - INFO - logger.py:111 - 考试记录已保存，ID: 1767429963, 得分: 100.0分
+2026-01-03 16:46:03 - interview_system - INFO - logger.py:111 - ???12???
+2026-01-03 16:46:03 - interview_system - INFO - logger.py:111 - ???12???
+2026-01-03 16:46:03 - interview_system - INFO - logger.py:111 - ???12???
+2026-01-03 16:46:03 - interview_system - INFO - logger.py:111 - ???1???????: print
+2026-01-03 16:46:04 - interview_system - INFO - logger.py:111 - ???12???
+2026-01-03 16:46:04 - interview_system - INFO - logger.py:111 - ???12???
+2026-01-03 16:46:04 - interview_system - INFO - logger.py:111 - 保存答题记录: 题目ID=1, 正确=True
+2026-01-03 16:46:04 - interview_system - INFO - logger.py:111 - ???12???
+2026-01-03 16:46:04 - interview_system - INFO - logger.py:111 - 保存答题记录: 题目ID=2, 正确=False
+2026-01-03 16:46:04 - interview_system - INFO - logger.py:111 - ???12???
+2026-01-03 16:46:04 - interview_system - INFO - logger.py:111 - 保存答题记录: 题目ID=2, 正确=False
+2026-01-03 16:46:04 - interview_system - INFO - logger.py:111 - 添加收藏: 题目ID=1
+2026-01-03 16:46:04 - interview_system - INFO - logger.py:111 - 取消收藏: 题目ID=1
+2026-01-03 16:46:30 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:46:30 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:46:30 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:46:30 - interview_system - INFO - logger.py:111 - ???12???
+2026-01-03 16:46:34 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:46:34 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:46:34 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:46:34 - interview_system - INFO - logger.py:111 - ???12???
+2026-01-03 16:46:34 - interview_system - WARNING - logger.py:115 - 可用题目数量(1)少于请求数量(20)
+2026-01-03 16:46:34 - interview_system - INFO - logger.py:111 - 生成考试，题目数量: 1, 考试ID: 1767429994
+2026-01-03 16:46:34 - interview_system - INFO - logger.py:111 - 考试开始，ID: 1767429994, 时间限制: 1800秒
+2026-01-03 16:46:34 - interview_system - INFO - logger.py:111 - 考试结束，ID: 1767429994, 耗时: 0.00秒
+2026-01-03 16:46:34 - interview_system - INFO - logger.py:111 - 考试记录已保存，ID: 1767429994, 得分: 100.0分
+2026-01-03 16:46:34 - interview_system - INFO - logger.py:111 - ???12???
+2026-01-03 16:46:34 - interview_system - INFO - logger.py:111 - ???12???
+2026-01-03 16:46:34 - interview_system - INFO - logger.py:111 - ???12???
+2026-01-03 16:46:34 - interview_system - INFO - logger.py:111 - ???1???????: print
+2026-01-03 16:46:35 - interview_system - INFO - logger.py:111 - ???12???
+2026-01-03 16:46:35 - interview_system - INFO - logger.py:111 - ???12???
+2026-01-03 16:46:35 - interview_system - INFO - logger.py:111 - 保存答题记录: 题目ID=1, 正确=True
+2026-01-03 16:46:35 - interview_system - INFO - logger.py:111 - ???12???
+2026-01-03 16:46:35 - interview_system - INFO - logger.py:111 - 保存答题记录: 题目ID=2, 正确=False
+2026-01-03 16:46:35 - interview_system - INFO - logger.py:111 - ???12???
+2026-01-03 16:46:35 - interview_system - INFO - logger.py:111 - 保存答题记录: 题目ID=2, 正确=False
+2026-01-03 16:46:35 - interview_system - INFO - logger.py:111 - 添加收藏: 题目ID=1
+2026-01-03 16:46:35 - interview_system - INFO - logger.py:111 - 取消收藏: 题目ID=1
+2026-01-03 16:48:35 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:48:35 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:48:35 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:48:35 - interview_system - INFO - logger.py:111 - 静态资源检查通过
+2026-01-03 16:48:35 - interview_system - INFO - logger.py:111 - 本地资源检查完成
+2026-01-03 16:48:35 - interview_system - INFO - logger.py:111 - Flask app initialized successfully
+2026-01-03 16:51:47 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:51:47 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:51:47 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 16:51:47 - interview_system - INFO - logger.py:111 - 静态资源检查通过
+2026-01-03 16:51:47 - interview_system - INFO - logger.py:111 - 本地资源检查完成
+2026-01-03 16:51:47 - interview_system - INFO - logger.py:111 - Flask app initialized successfully
+2026-01-03 16:52:22 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 25732 and this is thread id 3328.
+2026-01-03 16:52:36 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 25732 and this is thread id 4836.
+2026-01-03 16:52:50 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 25732 and this is thread id 24376.
+2026-01-03 17:16:37 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 17:16:37 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 17:16:37 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 17:16:37 - interview_system - INFO - logger.py:111 - 静态资源检查通过
+2026-01-03 17:16:37 - interview_system - INFO - logger.py:111 - 本地资源检查完成
+2026-01-03 17:16:37 - interview_system - INFO - logger.py:111 - Flask app initialized successfully
+2026-01-03 17:16:49 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 26188 and this is thread id 4948.
+2026-01-03 17:16:53 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 26188 and this is thread id 22912.
+2026-01-03 17:18:12 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 26188 and this is thread id 4720.
+2026-01-03 17:19:22 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 17:19:22 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 17:19:22 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 17:19:22 - interview_system - INFO - logger.py:111 - 静态资源检查通过
+2026-01-03 17:19:22 - interview_system - INFO - logger.py:111 - 本地资源检查完成
+2026-01-03 17:19:22 - interview_system - INFO - logger.py:111 - Flask app initialized successfully
+2026-01-03 17:19:29 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 36988 and this is thread id 33084.
+2026-01-03 17:19:35 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 36988 and this is thread id 2552.
+2026-01-03 17:23:23 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 17:23:23 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 17:23:23 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 17:23:23 - interview_system - INFO - logger.py:111 - 回退题库已加载，200 条题目
+2026-01-03 17:23:23 - interview_system - INFO - logger.py:111 - 静态资源检查通过
+2026-01-03 17:23:23 - interview_system - INFO - logger.py:111 - 本地资源检查完成
+2026-01-03 17:23:23 - interview_system - INFO - logger.py:111 - Flask app initialized successfully
+2026-01-03 17:23:30 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 38136 and this is thread id 3196.
+2026-01-03 17:23:32 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 38136 and this is thread id 3992.
+2026-01-03 17:29:52 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 17:29:52 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 17:29:52 - interview_system - WARNING - logger.py:115 - ?????????????????: no such column: category
+2026-01-03 17:29:52 - interview_system - INFO - logger.py:111 - 回退题库已加载，200 条题目
+2026-01-03 17:29:52 - interview_system - INFO - logger.py:111 - 静态资源检查通过
+2026-01-03 17:29:52 - interview_system - INFO - logger.py:111 - 本地资源检查完成
+2026-01-03 17:29:52 - interview_system - INFO - logger.py:111 - Flask app initialized successfully
+2026-01-03 17:29:57 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: no such column: q.category
+2026-01-03 17:30:02 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: no such column: q.category

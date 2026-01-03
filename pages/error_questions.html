@@ -26,24 +26,21 @@
     <div class="container mt-4">
         <h2>错题本</h2>
         <p class="text-muted">共 {{ error_questions|length }} 道错题</p>
-        
+
         {% if error_questions %}
         <div class="list-group">
-            {% for question in error_questions %}
+            {% for q in error_questions %}
             <div class="list-group-item">
-                <h5><a href="/question/detail/{{ question.get('id') }}">{{ question.get('title', '无标题') }}</a></h5>
-                <p class="text-muted">分类: {{ question.get('category', '未知') }} | 难度: {{ question.get('difficulty', '未知') }}</p>
-                <p><strong>你的答案:</strong> {{ question.get('user_answer', '未作答') }}</p>
-                <p><strong>正确答案:</strong> {{ question.get('correct_answer', '未知') }}</p>
+                <h5><a href="/question/detail/{{ q.get('id') }}">{{ q.get('title', '无标题') }}</a></h5>
+                <p class="text-muted">分类: {{ q.get('category', '未知') }} | 难度: {{ q.get('difficulty', '未知') }}</p>
+                <p class="text-muted">最近错误时间: {{ q.get('last_time', '未知') }}</p>
             </div>
             {% endfor %}
         </div>
         {% else %}
-        <div class="alert alert-info">
-            <i class="fa fa-info-circle"></i> 暂无错题，继续保持！
-        </div>
+        <div class="alert alert-info"><i class="fa fa-info-circle"></i> 暂无错题</div>
         {% endif %}
-        
+
         <div class="mt-4">
             <a href="{{ url_for('progress.progress') }}" class="btn btn-secondary">返回进度</a>
         </div>

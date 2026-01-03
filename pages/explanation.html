@@ -19,7 +19,7 @@
     <!-- 导航栏 -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container">
-        <a class="navbar-brand" href="index.html">Python面试题系统</a>
+        <a class="navbar-brand" href="{{ url_for('main.index') }}">Python面试题系统</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -31,15 +31,15 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">首页</a>
+              <a class="nav-link" href="{{ url_for('main.index') }}">首页</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="question_category.html">题库分类</a>
+              <a class="nav-link" href="{{ url_for('question.question_category') }}">题库分类</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="mock_interview.html">模拟面试</a>
+              <a class="nav-link" href="{{ url_for('interview.mock_interview') }}">模拟面试</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">我的进度</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('progress.progress') }}">我的进度</a></li>
           </ul>
         </div>
       </div>
@@ -115,7 +115,7 @@
             <span class="badge bg-secondary">Python基础数据类型</span>
           </div>
           <!-- 按钮组 -->
-          <a href="question_category.html" class="btn btn-secondary"
+          <a href="{{ url_for('question.question_category') }}" class="btn btn-secondary"
             >返回题库</a
           >
           <a href="#" id="nextQuestionBtn" class="btn btn-primary ms-2"
@@ -134,132 +134,99 @@
     <script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
     <script>
-      // 模拟题目解析数据
-      const explanationData = {
-        1: {
-          id: 1,
-          title: "Python中列表和元组的区别是什么？",
-          correctAnswer: "B",
-          explanation:
-            "Python中列表（list）使用[]定义，是可变对象，支持增删改查操作；元组（tuple）使用()定义，是不可变对象，一旦创建无法修改元素。此外，元组的访问速度比列表更快，适合存储无需修改的数据；列表适合存储需要动态调整的数据。",
-          knowledgePoint: "Python基础数据类型",
-        },
-        2: {
-          id: 2,
-          title: "什么是Python的装饰器？请举例说明",
-          correctAnswer: "A",
-          explanation:
-            "Python装饰器是一种语法糖，用于在不修改原函数代码和调用方式的前提下，为函数添加额外功能（如日志记录、性能统计、权限校验等）。装饰器本质是一个高阶函数，接收被装饰函数作为参数，返回一个包装函数。",
-          knowledgePoint: "Python高级特性",
-        },
-        101: {
-          id: 101,
-          title: "Flask和Django的区别有哪些？",
-          correctAnswer: "ABD",
-          explanation:
-            "1. 轻量性：Flask是轻量级微框架，仅提供核心功能，其他功能需依赖第三方扩展；Django是全栈框架，内置ORM、Admin后台、表单验证等丰富功能。2. ORM支持：Django内置强大ORM，Flask无内置ORM，需使用SQLAlchemy等第三方库。3. 适用场景：Django适合大型、复杂的企业级项目；Flask适合小型项目、API接口或快速原型开发。4. 性能：两者性能差异并非数量级，主要取决于项目优化和场景。",
-          knowledgePoint: "Python Web框架",
-        },
-        201: {
-          id: 201,
-          title: "你在项目中如何优化Python程序的性能？",
-          correctAnswer: "ABCD",
-          explanation:
-            "1. 数据结构优化：使用生成器（generator）代替列表推导式，减少内存占用；使用集合（set）进行成员判断，时间复杂度O(1)优于列表O(n)。2. 变量优化：减少全局变量使用，全局变量查询速度慢于局部变量；使用局部变量缓存频繁访问的对象属性。3. 并发优化：IO密集型任务使用多线程/异步（asyncio），CPU密集型任务使用多进程。4. 缓存优化：使用Redis/Memoize对频繁访问的热点数据进行缓存，减少重复计算或数据库查询。5. 代码优化：避免不必要的循环嵌套，使用内置函数（如map、filter）代替手动循环，内置函数由C实现，速度更快。",
-          knowledgePoint: "Python项目性能优化",
-        },
-      };
+      const API_BASE = "/question/api";
+      const questionId =
+        window.location.pathname.split("/").pop() ||
+        new URLSearchParams(window.location.search).get("question_id") ||
+        1;
 
-      // 获取URL中的题目ID
-      function getUrlParam(name) {
-        const reg = new RegExp(`(^|&)${name}=([^&]*)(&|$)`);
-        const r = window.location.search.substr(1).match(reg);
-        return r ? decodeURIComponent(r[2]) : 1;
+      function getParam(name) {
+        return new URLSearchParams(window.location.search).get(name);
       }
-      const currentQuestionId = getUrlParam("question_id");
-      const currentExplanation =
-        explanationData[currentQuestionId] || explanationData[1];
 
-      // 模拟获取用户答题记录（从URL或本地存储，静态预览简化）
-      function getLastUserAnswer() {
-        // 简单模拟：如果从答题页跳转，默认带一个模拟答案
-        const referrer = document.referrer;
-        if (referrer.includes("answer_page.html")) {
-          return currentQuestionId == 1
-            ? "B"
-            : currentQuestionId == 101
-            ? "ABD"
-            : "A";
+      function normalizeAnswer(ans) {
+        if (!ans) return "";
+        return ans
+          .toString()
+          .toUpperCase()
+          .replace(/[^A-D]/g, "")
+          .split("")
+          .sort()
+          .join("");
+      }
+
+      function setScoreBadge(isCorrect) {
+        const el = document.getElementById("scoreResult");
+        const text = isCorrect ? "判分结果：正确" : "判分结果：错误";
+        el.textContent = text;
+      }
+
+      async function loadExplanation() {
+        const userAnswer = normalizeAnswer(getParam("user_answer") || "");
+        const url = `${API_BASE}/explanation/${questionId}?user_answer=${encodeURIComponent(userAnswer)}`;
+
+        const res = await fetch(url, { method: "GET" });
+        const payload = await res.json();
+
+        if (!payload || !payload.success) {
+          document.getElementById("questionTitle").textContent = "加载失败";
+          document.getElementById("questionExplanation").innerHTML =
+            `<div class="alert alert-danger"><i class="fa fa-times-circle"></i> ${payload?.msg || "加载失败"}</div>`;
+          return;
         }
-        return "未作答";
-      }
-      const userAnswer = getLastUserAnswer();
-      const isCorrect = userAnswer === currentExplanation.correctAnswer;
 
-      // 渲染解析内容
-      function renderExplanation() {
-        document.getElementById(
-          "questionTitle"
-        ).textContent = `题目 ${currentExplanation.id}：${currentExplanation.title}`;
+        const data = payload.data;
 
-        // 渲染答题结果
-        const answerResultEl = document.getElementById("answerResult");
-        answerResultEl.innerHTML = `
-                <h6 class="text-success">正确答案：${
-                  currentExplanation.correctAnswer
-                }</h6>
-                <h6 class="text-primary">你的答案：${userAnswer}</h6>
-                <h6 class="text-info">判分结果：${
-                  isCorrect ? "正确✅" : "错误❌"
-                }</h6>
-            `;
+        document.getElementById("questionTitle").textContent = `题目 ${data.id}：${data.title}`;
+        document.getElementById("correctAnswerDisplay").textContent = data.correct_answer || "--";
+        document.getElementById("userAnswerDisplay").textContent = data.user_answer || "未作答";
+        setScoreBadge(!!data.is_correct);
 
-        // 渲染解析和考点
-        document.getElementById("questionExplanation").innerHTML = `
-                <h6>解析：</h6>
-                <p class="card-text">${currentExplanation.explanation}</p>
-            `;
-        document.getElementById("knowledgePoint").innerHTML = `
-                <h6>考点：</h6>
-                <span class="badge bg-secondary">${currentExplanation.knowledgePoint}</span>
-            `;
+        // 解析
+        document.querySelector("#questionExplanation p")?.remove();
+        document.getElementById("questionExplanation").innerHTML =
+          `<h6>解析：</h6><p class="card-text">${data.analysis || "暂无解析"}</p>`;
 
-        // 模拟下一题链接
-        const nextQuestionBtn = document.getElementById("nextQuestionBtn");
-        let nextId = parseInt(currentQuestionId) + 1;
-        // 简单处理分类题的下一题
-        if (currentQuestionId >= 100 && currentQuestionId < 200) {
-          nextId = parseInt(currentQuestionId) + 1;
-          if (nextId >= 200) nextId = 101; // 框架题循环
-        } else if (currentQuestionId >= 200) {
-          nextId = parseInt(currentQuestionId) + 1;
-          if (nextId >= 206) nextId = 201; // 项目题循环
-        } else {
-          nextId = parseInt(currentQuestionId) + 1;
-          if (nextId >= 6) nextId = 1; // 基础题循环
-        }
-        nextQuestionBtn.href = `answer_page.html?question_id=${nextId}`;
+        // 考点
+        document.getElementById("knowledgePoint").innerHTML =
+          `<h6>考点：</h6><span class="badge bg-secondary">${data.knowledge_point || "未标注"}</span>`;
+
+        // 下一题（简单：id+1，不存在则回到1）
+        const nextBtn = document.getElementById("nextQuestionBtn");
+        nextBtn.href = `/question/answer?question_id=${Number(data.id) + 1}`;
       }
 
-      // 收藏/取消收藏切换
-      document
-        .getElementById("collectBtn")
-        .addEventListener("click", function () {
-          const btn = this;
-          if (btn.classList.contains("btn-outline-warning")) {
-            btn.className = "btn btn-warning";
-            btn.innerHTML = '<i class="fa fa-star"></i> 已收藏';
-            alert("收藏成功！可在“我的收藏”中查看");
-          } else {
-            btn.className = "btn btn-outline-warning";
-            btn.innerHTML = '<i class="fa fa-star"></i> 收藏题目';
-            alert("已取消收藏！");
-          }
+      async function toggleFavorite() {
+        const res = await fetch("/progress/api/favorite/toggle", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ question_id: Number(questionId) }),
         });
+        const payload = await res.json();
+        if (!payload || !payload.success) {
+          alert(payload?.msg || "操作失败");
+          return;
+        }
 
-      // 页面加载初始化
+        const isFav = !!payload.data?.is_favorite;
+        const btn = document.getElementById("collectBtn");
+        if (isFav) {
+          btn.className = "btn btn-warning";
+          btn.innerHTML = '<i class="fa fa-star"></i> 已收藏';
+        } else {
+          btn.className = "btn btn-outline-warning";
+          btn.innerHTML = '<i class="fa fa-star"></i> 收藏题目';
+        }
+      }
+
+      document.getElementById("collectBtn").addEventListener("click", toggleFavorite);
+
       window.onload = function () {
-        renderExplanation();
+        loadExplanation().catch((e) => {
+          console.error(e);
+          document.getElementById("questionExplanation").innerHTML =
+            `<div class="alert alert-danger"><i class="fa fa-times-circle"></i> 加载异常</div>`;
+        });
       };
     </script>
   </body>

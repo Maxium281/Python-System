@@ -180,3 +180,23 @@ Params: (1,)
 SQL: SELECT COUNT(*) as total FROM user_records WHERE user_id = ?
 Params: (1,)
 2025-12-28 17:32:04 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: no such column: user_id
+2025-12-28 20:14:23 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: 'DBManager' object has no attribute 'fetchone'
+2025-12-28 20:14:27 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: 'DBManager' object has no attribute 'fetchone'
+2025-12-28 20:14:30 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: 'DBManager' object has no attribute 'fetchone'
+2026-01-03 16:44:25 - interview_system - ERROR - logger.py:119 - ??????: 'sqlite3.Row' object has no attribute 'get'
+2026-01-03 16:44:25 - interview_system - ERROR - logger.py:119 - ??????: 'sqlite3.Row' object has no attribute 'get'
+2026-01-03 16:44:25 - interview_system - ERROR - logger.py:119 - ??????: 'sqlite3.Row' object has no attribute 'get'
+2026-01-03 16:44:25 - interview_system - ERROR - logger.py:119 - 获取错题列表失败: no such column: ur.user_id
+2026-01-03 16:44:25 - interview_system - ERROR - logger.py:119 - 添加收藏失败: no such column: user_id
+2026-01-03 16:52:22 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 25732 and this is thread id 3328.
+2026-01-03 16:52:36 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 25732 and this is thread id 4836.
+2026-01-03 16:52:50 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 25732 and this is thread id 24376.
+2026-01-03 17:16:49 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 26188 and this is thread id 4948.
+2026-01-03 17:16:53 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 26188 and this is thread id 22912.
+2026-01-03 17:18:12 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 26188 and this is thread id 4720.
+2026-01-03 17:19:29 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 36988 and this is thread id 33084.
+2026-01-03 17:19:35 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 36988 and this is thread id 2552.
+2026-01-03 17:23:30 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 38136 and this is thread id 3196.
+2026-01-03 17:23:32 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 38136 and this is thread id 3992.
+2026-01-03 17:29:57 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: no such column: q.category
+2026-01-03 17:30:02 - interview_system - ERROR - logger.py:119 - 获取学习进度失败: no such column: q.category
